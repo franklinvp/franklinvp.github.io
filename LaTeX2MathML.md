@@ -394,12 +394,14 @@ navbar-links:
     </div>
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
-                style="width: 20vw;
+                style="float:left;
+                       width: 20vw;
                        resize: none;
                        background-color: rgba(250,250,250,1);
                        border: none;"
                 placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
-      <div style="width: 20vw;
+      <div style="float: right;
+                  width: 20vw;
                   height: 50vh;
                   resize: none;
                   overflow-x: auto;
