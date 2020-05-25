@@ -426,6 +426,7 @@ navbar-links:
     </div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
+                min-width: 100%;
                 float: left;
                 margin-top: 1em;
                 top: 50em;
