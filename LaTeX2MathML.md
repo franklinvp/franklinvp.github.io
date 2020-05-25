@@ -394,10 +394,7 @@ layout: page
                   border-radius: 4pt;">
     </div>
     <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
-              style="position: fixed;
-                     top: 12em;
-                     left: 0em;
-                     width: 40vw;
+              style="width: 40vw;
                      resize: none;
                      background-color: rgba(250,250,250,1);
                      border: none;"
