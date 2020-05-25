@@ -106,10 +106,10 @@ The [Thue-Morse sequence](https://en.wikipedia.org/wiki/Thue%E2%80%93Morse_seque
 
 We start with $0$ as its first element. At every step we repeat the elements of the sequence that have been generated so far, but replace each occurrence of $0$ with a $1$ and each occurrence of $1$ with a $0$. In the first 3 steps we obtain
 
-  1. $0$
-  2. $0,1$
-  3. $0,1,1,0$
-  4. $0,1,1,0,1,0,0,1$
+  * $0$
+  * $0,1$
+  * $0,1,1,0$
+  * $0,1,1,0,1,0,0,1$
 
 If $n=2^k$, for some integer $k$, we can write the numbers $0,1,2,\ldots,2^{k+1}-1$ above the elements of the Thue-Morse sequence. Let $A$ be the set of all numbers above a $0$ from the Thue-Morse sequence and $B$ the set of those above a $1$. The sets $A$ and $B$ are each of size $2^k$ and have the property of producing the same multiset of pairwise sums.
 
