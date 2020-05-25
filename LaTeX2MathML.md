@@ -330,14 +330,14 @@ navbar-links:
 
       .copiedMessage {
         opacity: 0;
-        z-index: 5;
+        z-index: 10;
         padding: 5pt;
         border-radius:4pt;    
       }
 
       .copiedMessageVisible {
         opacity: 1;
-        z-index: 5;
+        z-index: 10;
         padding: 5pt;
         border-radius:4pt;
         background-color:rgba(255,255,224, 0.9);
@@ -400,7 +400,7 @@ navbar-links:
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="15" oninput="UpdateMath(this.value)" 
                 style="float:left;
-                       top: 6em;
+                       top: 7em;
                        width: 50%;
                        min-height: 22.5em;
                        resize: none;
@@ -408,7 +408,7 @@ navbar-links:
                        border: none;"
                 placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
       <div style="float: right;
-                  top: 6em;
+                  top: 7em;
                   width: 46%;
                   min-height: 22.5em;
                   resize: none;
