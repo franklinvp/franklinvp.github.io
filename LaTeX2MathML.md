@@ -355,7 +355,7 @@ layout: page
   </head>
   <body id="uniqueidentifier" onload="recalling()" style="overflow-x:hidden;">
     <div cols="35" rows="1"
-         style="position: absolute;
+         style="position: inherit;
                 top: 0em;
                 left: 0em;
                 resize: none;
