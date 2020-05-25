@@ -382,6 +382,7 @@ navbar-links:
     <div id="CopyToClipboard"
          class="copybutton"
          style="top: 3em;
+                z-index: 10;
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
                 -khtml-user-select: none;
