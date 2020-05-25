@@ -400,16 +400,16 @@ navbar-links:
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="15" oninput="UpdateMath(this.value)" 
                 style="float:left;
-                       top: 5em;
+                       top: 6em;
                        width: 50%;
                        resize: none;
                        background-color: rgba(250,250,250,1);
                        border: none;"
                 placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
       <div style="float: right;
-                  top: 5em;
+                  top: 6em;
                   width: 46%;
-                  min-height: 20em;
+                  min-height: 22em;
                   resize: none;
                   overflow-x: auto;
                   overflow-y: auto;
