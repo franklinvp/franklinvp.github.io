@@ -402,6 +402,7 @@ navbar-links:
                 style="float:left;
                        top: 6em;
                        width: 50%;
+                       min-height: 22.5em;
                        resize: none;
                        background-color: rgba(250,250,250,1);
                        border: none;"
@@ -409,7 +410,7 @@ navbar-links:
       <div style="float: right;
                   top: 6em;
                   width: 46%;
-                  min-height: 22em;
+                  min-height: 22.5em;
                   resize: none;
                   overflow-x: auto;
                   overflow-y: auto;
