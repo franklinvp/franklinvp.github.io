@@ -413,6 +413,7 @@ navbar-links:
                   top: 7em;
                   width: 46%;
                   min-height: 22.5em;
+                  max-height: 22.5em;
                   resize: none;
                   overflow-x: auto;
                   overflow-y: auto;
