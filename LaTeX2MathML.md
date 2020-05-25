@@ -244,8 +244,6 @@ navbar-links:
        /* Tooltip container */
        .tooltip {
          visibility: visible;
-         position: fixed;
-         top: 0em;
          display: inline-block;
 
          padding:5pt;
@@ -276,7 +274,6 @@ navbar-links:
          border-radius: 6px;
 
          /* Position the tooltip text */
-         position: fixed;
          z-index: 2;
          left: 50vw;
          height:95vh;
@@ -324,8 +321,6 @@ navbar-links:
        border-radius: 6px;
 
        /* Position the tooltip text */
-       position: fixed;
-       top: 1vh;
        left: 5vw;
        width: 1700px;
        height: 2200px;
