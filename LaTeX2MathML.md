@@ -392,12 +392,29 @@ navbar-links:
                   box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
                   border-radius: 4pt;">
     </div>
-    <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
-              style="width: 20vw;
-                     resize: none;
-                     background-color: rgba(250,250,250,1);
-                     border: none;"
-              placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
+    <div>
+      <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
+                style="width: 20vw;
+                       resize: none;
+                       background-color: rgba(250,250,250,1);
+                       border: none;"
+                placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
+      <div style="width: 20vw;
+                  height: 50vh;
+                  resize: none;
+                  overflow-x: auto;
+                  overflow-y: auto;
+                  padding: 1em;
+                  padding-left: 2em;
+                  padding-right: 2em;
+                  display: block;
+                  background-color: rgba(250, 250, 250, 1);
+                  box-shadow: 2px 2px 8px rgba(190, 190, 190, 1) inset;
+                  border-radius: 4pt;
+                  border: none;">
+        <xmp id="MathMLRaw"></xmp>
+      </div>    
+    </div>
     <div style="top: 32em;
                 left: 0em;">Rendering</div>
     <div id="MathOutput" class="mathoutputclass"
@@ -431,23 +448,6 @@ navbar-links:
        onmousedown="pressdown(this)"
        onmouseup="pullup(this)"
        onclick="copyToClipboard()">Copy MathML</div>
-  <div style="top: 3em;
-              left: 45vw; 
-              width: 50vw;
-              height: 90vh;
-              resize: none;
-              overflow-x: auto;
-              overflow-y: auto;
-              padding: 1em;
-              padding-left: 2em;
-              padding-right: 2em;
-              display: block;
-              background-color: rgba(250, 250, 250, 1);
-              box-shadow: 2px 2px 8px rgba(190, 190, 190, 1) inset;
-              border-radius: 4pt;
-              border: none;">
-    <xmp id="MathMLRaw"></xmp>
-  </div>
   <div id="CopiedMessage"
        class="copiedMessage"
        style="top: calc(3em - 1pt);
