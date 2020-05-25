@@ -411,7 +411,7 @@ navbar-links:
       <div style="float: right;
                   top: 4em;
                   width: 46%;
-                  height: 45vh;
+                  height: 15em;
                   resize: none;
                   overflow-x: auto;
                   overflow-y: auto;
