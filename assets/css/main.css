@@ -16,6 +16,7 @@ body {
   color: #404040;
   position: relative;
   background-color: {{ site.page-col | default: "#FFFFFF" }};
+  background-image: url(assets/img/avatar-icon.jpg);
   {% if site.page-img %}
   background-image: url({{ site.page-img | assets/img/avatar-icon.jpg }});
   background-attachment: fixed;
