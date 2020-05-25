@@ -867,18 +867,18 @@ pre {
 }
 
 .box-note {
-  background-color: #3F74A3;
+  background-color: #AAD7FF;
   border-left-color: #032B4F;
   color: "#ffffff";
 }
 
 .box-warning {
-  background-color: #FBD456;
+  background-color: #FFE9A4;
   border-left-color: #7A5D00;
 }
 
 .box-error {
-  background-color: #FB8A56;
+  background-color: #FFC0A4;
   border-left-color: #7A2600;
 }
 
