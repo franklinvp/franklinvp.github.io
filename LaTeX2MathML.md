@@ -359,6 +359,7 @@ navbar-links:
        <input type="checkbox" id="itags" checked="true" onchange = "toggleitags(this)"/>NS tags
        <input type="checkbox" id="NoBreakLines" onchange = "toggleBreakLines(this)"/>Compact
     </div>
+    <!--
     <div class="tooltip" 
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
@@ -377,6 +378,7 @@ navbar-links:
            style="box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
                   border-radius: 4pt;">
     </div>
+    -->
     <div id="CopyToClipboard"
          class="copybutton"
          style="top: 3em;
@@ -424,10 +426,9 @@ navbar-links:
           <xmp id="MathMLRaw"></xmp>
       </div>    
     </div>
-    <div style="top: 30em; height: 2em; width: 100%;"></div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
-                top: 42em;
+                top: 45em;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
                 -ms-transform: translateY(-50%, -50%);
