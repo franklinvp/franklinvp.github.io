@@ -409,7 +409,7 @@ navbar-links:
       <div style="float: right;
                   top: 5em;
                   width: 46%;
-                  min-height: 15em;
+                  min-height: 20em;
                   resize: none;
                   overflow-x: auto;
                   overflow-y: auto;
@@ -426,6 +426,7 @@ navbar-links:
     </div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
+                float: left;
                 margin-top: 1em;
                 top: 50em;
                 overflow: auto;
