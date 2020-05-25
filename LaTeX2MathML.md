@@ -382,7 +382,6 @@ navbar-links:
     <div id="CopyToClipboard"
          class="copybutton"
          style="top: 3em;
-                left: calc(45vw - 8em);
                 -webkit-touch-callout: none;
                 -webkit-user-select: none;
                 -khtml-user-select: none;
@@ -397,8 +396,7 @@ navbar-links:
          onclick="copyToClipboard()">Copy MathML</div>
     <div id="CopiedMessage"
          class="copiedMessage"
-         style="top: calc(3em - 1pt);
-                left: 45vw">MathML Copied</div>
+         style="top: calc(3em - 1pt);">MathML Copied</div>
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="15" oninput="UpdateMath(this.value)" 
                 style="float:left;
