@@ -14,6 +14,7 @@ author: Franklin Vera Pacheco
 navbar-links:
   About Me: "aboutme"
   YouTube: "https://www.youtube.com/user/franklinvp"
+  LaTeX to MathML: "LaTeX2MathML.html"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
   #  - Learn markdown: "https://www.markdowntutorial.com/"
