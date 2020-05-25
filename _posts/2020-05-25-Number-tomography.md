@@ -14,7 +14,8 @@ The process of obtaining $S$ from $A$ is like a tomography. For any choice of *d
 **Claim 1:**  
 When $n$ is not a power of $2$, then one can uniquely recover $A$ from $S$.
 
-**Proof of claim 1 [Symmetric polynomials]:**[^1]  
+**Proof of claim 1 [Symmetric polynomials]:**[^1]
+
 Assume that $n$ is not a perfect power of $2$. Denote
 
 $$
@@ -64,7 +65,7 @@ f^2(x)-g^2(x)&=\left(\sum_{i=1}^{n}x^{2a_i}+2\sum_{1\leq i<j\leq n}x^{a_i+a_j}\r
 \end{align}
 $$
 
-Since $f(1)=g(1)=n$, then $x=1$ is a root of $f-g$. Observe that $f-g$ is a nonzero polynomial because $a_1,a_2,\ldots,a_n$ and $b_1,b_2,\ldtos,b_n$ are distinct sequences. Let $f(x)-g(x)=(x-1)^kh(x)$, for $k\geq 1$ and $h(1)\neq0$. Then
+Since $f(1)=g(1)=n$, then $x=1$ is a root of $f-g$. Observe that $f-g$ is a nonzero polynomial because $a_1,a_2,\ldots,a_n$ and $b_1,b_2,\ldots,b_n$ are distinct sequences. Let $f(x)-g(x)=(x-1)^kh(x)$, for $k\geq 1$ and $h(1)\neq0$. Then
 
 $$
 \begin{align}
@@ -112,5 +113,5 @@ We start with $0$ as its first element. At every step we repeat the elements of 
 
 If $n=2^k$, for some integer $k$, we can write the numbers $0,1,2,\ldots,2^{k+1}-1$ above the elements of the Thue-Morse sequence. Let $A$ be the set of all numbers above a $0$ from the Thue-Morse sequence and $B$ the set of those above a $1$. The sets $A$ and $B$ are each of size $2^k$ and have the property of producing the same multiset of pairwise sums.
 
-[^1]: Selfridge and Straus, *On the determination of numbers by their sums of a fixed order*, 1958.
+[^1]: Selfridge and Straus, *On the determination of numbers by their sums of a fixed order*, 1958.  
 [^2]: Andreescu and Savchev, *Mathematical Miniatures*, 2003.
