@@ -17,7 +17,7 @@
       "HTML-CSS": { availableFonts: ["TeX"]}
       });
     </script>
-    <script type="text/javascript"  src="../MathJax/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script>
       function copyToClipboard() {
         var range = document.createRange();
@@ -56,14 +56,14 @@
         localStorage.setItem('mml_output', mml);
         localStorage.setItem('math_output', document.getElementById('MathOutput').innerHTML);
         localStorage.setItem('displayinlinechecked', document.getElementById('display-inline').checked);
-        localStorage.setItem('ibmtagschecked', document.getElementById('IBMtags').checked);
+        localStorage.setItem('itagschecked', document.getElementById('itags').checked);
         localStorage.setItem('compactchecked', document.getElementById('NoBreakLines').checked);
       }
 
       function recalling(){
-        var checkboxids = ['display-inline', 'IBMtags', 'NoBreakLines'];
-        var storagechecked = ['displayinlinechecked', 'ibmtagschecked', 'compactchecked'];
-        var trasformation = [toggleInlineDisplay, toggleIBMtags, toggleBreakLines];
+        var checkboxids = ['display-inline', 'itags', 'NoBreakLines'];
+        var storagechecked = ['displayinlinechecked', 'itagschecked', 'compactchecked'];
+        var trasformation = [toggleInlineDisplay, toggleitags, toggleBreakLines];
         /*If LaTeX is saved, then recall everything, otherwise start fresh*/
         var latex = localStorage.getItem('latex_input');
         if (latex === null || latex == '') {
@@ -105,7 +105,7 @@
 
       function toggleInlineDisplay(element) {
         var mml = document.getElementById('MathMLRaw').innerHTML;
-        var ibmTags = document.getElementById('IBMtags').checked;
+        var ibmTags = document.getElementById('itags').checked;
         if (element.checked) {
           mml = mml.replace("<equation-inline>", "<equation-display>");
           mml = mml.replace("</equation-inline>", "</equation-display>");
@@ -133,7 +133,7 @@
         localStorage.setItem('displayinlinechecked', element.checked);
       }
 
-      function toggleIBMtags(element) {
+      function toggleitags(element) {
         var mml = localStorage.getItem('mml_output');
         if (element.checked) {
           mml = mml.replace(/<m/g, "<m:m");
@@ -148,7 +148,7 @@
         }
         document.getElementById('MathMLRaw').innerHTML = mml;
         localStorage.setItem('mml_output', mml);
-        localStorage.setItem('ibmtagschecked', element.checked);
+        localStorage.setItem('itagschecked', element.checked);
       }
 
       function toggleBreakLines(element) {
@@ -180,7 +180,7 @@
         var TeXtoTransform = TeX;
         MathJax.Hub.queue.Push(["Text", math, TeXtoTransform]);
         toMathML(math, function (mml) {
-          var ibmTags = document.getElementById('IBMtags').checked;
+          var ibmTags = document.getElementById('itags').checked;
           if (ibmTags) {   
             mml = mml.replace(/<m/g, "<m:m");
             mml = mml.replace(/<\/m/g, "</m:m");
@@ -357,7 +357,7 @@
               right: 0pt;
               height: 5pt;
               z-index: 5;
-              background-color: rgba(187, 25, 25, 1);"></div>
+              background-color: #0f4c81;"></div>
     <div cols="35" rows="1"
          style="position: absolute;
                 top: 1em;
@@ -392,8 +392,8 @@
       </math>&nbsp;&nbsp;
        <input type="checkbox" id="display-inline"
               onchange = "toggleInlineDisplay(this)">Displayed equation</input>
-       <input type="checkbox" id="IBMtags" checked="true"
-              onchange = "toggleIBMtags(this)">IBM tags</input>
+       <input type="checkbox" id="itags" checked="true"
+              onchange = "toggleitags(this)">IBM tags</input>
        <input type="checkbox" id="NoBreakLines"
               onchange = "toggleBreakLines(this)">Compact</input>
     </div>
@@ -404,7 +404,7 @@
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
          onclick="switchTip('img1', 'showtip')"
-         ondblclick="switchTip('img1', 'bigtip')">Lilian's cheat sheet $1$
+         ondblclick="switchTip('img1', 'bigtip')">Cheat sheet $1$
       <img id="img1" class="tooltiptext" src="CheatSheet1.png" alt="Cheatsheet 1" 
            style="top: -2em;
                   box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
@@ -417,7 +417,7 @@
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
          onclick="switchTip('img2', 'showtip')"
-         ondblclick="switchTip('img2', 'bigtip')">Lilian's cheat sheet $2$
+         ondblclick="switchTip('img2', 'bigtip')">Cheat sheet $2$
       <img id="img2" class="tooltiptext" src="CheatSheet2.png" alt="Cheatsheet 2" 
            style="top: -5em;
                   box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
