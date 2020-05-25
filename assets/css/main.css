@@ -270,6 +270,7 @@ img {
 .navbar-custom .nav-item.dropdown .dropdown-menu .dropdown-item {
   white-space: normal;
   padding: 0.625rem;
+  color: "#aaaaaa";
   background-color: {{ site.navbar-col | default: "#F5F5F5" }};
   text-decoration: none !important;
   border-width: 0 1px 1px 1px;
@@ -864,18 +865,18 @@ pre {
 }
 
 .box-note {
-  background-color: #eee;
-  border-left-color: #2980b9;
+  background-color: #3F74A3;
+  border-left-color: #032B4F;
 }
 
 .box-warning {
-  background-color: #fdf5d4;
-  border-left-color: #f1c40f;
+  background-color: #FBD456;
+  border-left-color: #7A5D00;
 }
 
 .box-error {
-  background-color: #f4dddb;
-  border-left-color: #c0392b;
+  background-color: #FB8A56;
+  border-left-color: #7A2600;
 }
 
 .box-success {
