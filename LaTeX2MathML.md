@@ -1,7 +1,7 @@
 ---
 layout: page
 navbar-links:
-  MathML Copied: {: id="CopiedMessage" class="copiedMessage" style="top: calc(3em - 1pt); left: 45vw"}
+  MathML Copied: 
 ---
 
 <html>
