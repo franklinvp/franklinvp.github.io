@@ -183,7 +183,7 @@ img {
 .navbar-custom .navbar-nav .nav-link:focus,
 .navbar-custom .navbar-nav .dropdown-item:hover,
 .navbar-custom .navbar-nav .dropdown-item:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.hover-col | default: "#aaaaaa" }};
 }
 
 .navbar-custom .navbar-nav .nav-item {
@@ -250,11 +250,13 @@ img {
 
 @media (min-width: 768px) {
   .navbar-custom .nav-item.dropdown:hover {
+    color: "#ffffff";
     background: rgba(0, 0, 0, 0.1);
   }
 }
 
 .navbar-custom .nav-item.dropdown.show {
+  color: "#aaaaaa";
   background: rgba(0, 0, 0, 0.2);
 }
 
