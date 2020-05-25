@@ -354,8 +354,7 @@ layout: page
   </head>
   <body id="uniqueidentifier" onload="recalling()" style="overflow-x:hidden;">
     <div cols="35" rows="1"
-         style="position: fixed;
-                top: 0em;
+         style="top: 0em;
                 left: 0em;
                 resize: none;
                 background-color: rgba(250,250,250,0);
@@ -368,8 +367,7 @@ layout: page
               onchange = "toggleBreakLines(this)">Compact</input>
     </div>
     <div class="tooltip" 
-         style="position: fixed;
-                top: 3em;
+         style="top: 3em;
                 left: 0em;"
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
@@ -381,8 +379,7 @@ layout: page
                   border-radius: 4pt;">
     </div>
     <div class="tooltip" 
-         style="position: fixed;
-                top: 6em;
+         style="top: 6em;
                 left: 0em;"
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
@@ -403,7 +400,7 @@ layout: page
                 left: 0em;">Rendering</div>
     <div id="MathOutput" class="mathoutputclass"
          style="top: 34vh;
-                left: 20em;
+                left: 25vw;
                 max-width: 90vw;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
@@ -418,8 +415,7 @@ layout: page
                 padding-right: 2em;">$${}$$</div>
   <div id="CopyToClipboard" 
        class="copybutton"
-       style="position: absolute;
-              top: 3em;
+       style="top: 3em;
               left: calc(45vw - 8em);
               -webkit-touch-callout: none;
               -webkit-user-select: none;
@@ -433,8 +429,7 @@ layout: page
        onmousedown="pressdown(this)"
        onmouseup="pullup(this)"
        onclick="copyToClipboard()">Copy MathML</div>
-  <div style="position: absolute;
-              top: 3em;
+  <div style="top: 3em;
               left: 45vw; 
               width: 50vw;
               height: 90vh;
@@ -453,8 +448,7 @@ layout: page
   </div>
   <div id="CopiedMessage"
        class="copiedMessage"
-       style="position: absolute;
-              top: calc(3em - 1pt);
+       style="top: calc(3em - 1pt);
               left: 45vw">MathML Copied</div>
   </body>
 </html>
