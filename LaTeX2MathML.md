@@ -429,9 +429,10 @@ navbar-links:
           <xmp id="MathMLRaw"></xmp>
       </div>    
     </div>
-    <div style="height: 2em; width: 100%;"></div>
+    <div style="top: 30em; height: 2em; width: 100%;"></div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
+                top: 42em;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
                 -ms-transform: translateY(-50%, -50%);
