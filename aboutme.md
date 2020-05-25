@@ -10,8 +10,17 @@ My name is Franklin and my last name Vera Pacheco. I have the following qualitie
 - Ready to do mathematics and talk about it
 - Can write some music but can't talk about it
 
-![Franklin Vera Pacheco](assets/img/avatar-icon.jpg){: .mx-auto.d-block height="90vw" width="80vw"}
-![Franklin Vera Pacheco](assets/img/outdoor_office.jpg){: .mx-auto.d-block height="90vw" width="80vw"}
-![Franklin Vera Pacheco](assets/img/Horseback.jpg){: .mx-auto.d-block height="90vw" width="80vw"}
-![Franklin Vera Pacheco](assets/img/404oops.jpg){: .mx-auto.d-block height="90vw" width="80vw"}
+### On the train
+
+![Franklin Vera Pacheco](assets/img/avatar-icon.jpg){: .mx-auto.d-block style="max-width: 200px; height: auto;"}
+
+### My outdoor office
+
+![Franklin Vera Pacheco](assets/img/outdoor_office.jpg){: .mx-auto.d-block style="max-width: 200px; height: auto;"}
+
+### Riding a sea horse
+![Franklin Vera Pacheco](assets/img/Horseback.jpg){: .mx-auto.d-block style="max-width: 200px; height: auto;"}
+
+### Goofy living room
+![Franklin Vera Pacheco](assets/img/404oops.jpg){: .mx-auto.d-block style="max-width: 200px; height: auto;"}
 
