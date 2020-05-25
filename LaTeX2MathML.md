@@ -21,7 +21,8 @@ navbar-links:
       });
     </script>
     <script type="text/javascript"  
-            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"/>
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     <script>
       function copyToClipboard() {
         var range = document.createRange();
@@ -355,17 +356,12 @@ navbar-links:
   </head>
   <body id="uniqueidentifier" onload="recalling()" style="overflow-x:hidden;">
     <div cols="35" rows="1"
-         style="top: 0em;
-                left: 0em;
-                resize: none;
+         style="resize: none;
                 background-color: rgba(250,250,250,0);
                 border:none;">
-       <input type="checkbox" id="display-inline"
-              onchange = "toggleInlineDisplay(this)">Displayed equation</input>
-       <input type="checkbox" id="itags" checked="true"
-              onchange = "toggleitags(this)">NS tags</input>
-       <input type="checkbox" id="NoBreakLines"
-              onchange = "toggleBreakLines(this)">Compact</input>
+       <input type="checkbox" id="display-inline" onchange = "toggleInlineDisplay(this)">Displayed equation</input>
+       <input type="checkbox" id="itags" checked="true" onchange = "toggleitags(this)">NS tags</input>
+       <input type="checkbox" id="NoBreakLines" onchange = "toggleBreakLines(this)">Compact</input>
     </div>
     <div class="tooltip" 
          onmousedown="pressdown(this)"
@@ -388,13 +384,13 @@ navbar-links:
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
                 style="float:left;
-                       width: 40%;
+                       width: 50%;
                        resize: none;
                        background-color: rgba(250,250,250,1);
                        border: none;"
                 placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
       <div style="float: right;
-                  width: 40%;
+                  width: 46%;
                   height: 50vh;
                   resize: none;
                   overflow-x: auto;
