@@ -22,7 +22,7 @@ p_k&=\sum_{i=1}^{n}a_i^k
 \end{align}
 $$
 
-for $k=1,2,3,\ldots$ 
+for $k=1,2,3,\ldots$ These are the [power-sum symmetric polynomials](https://en.wikipedia.org/wiki/Power_sum_symmetric_polynomial) in the variables $s_i$ and $a_i$, respectively.
 
 Observe that the $s_i$ uniquely determine the $P_k$ and the $p_k$ uniquely determine the [elementary symmetric polynomials](https://en.wikipedia.org/wiki/Elementary_symmetric_polynomial) in the $a_i$ via [Girard-Newton formulae](https://en.wikipedia.org/wiki/Newton%27s_identities). In turn, the *elementary symmetric polynomials* in the $a_i$ uniquely determine these via [Vieta's formulas](https://en.wikipedia.org/wiki/Vieta%27s_formulas).
 
