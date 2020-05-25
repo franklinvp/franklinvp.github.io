@@ -382,7 +382,27 @@ navbar-links:
            style="box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
                   border-radius: 4pt;">
     </div>
-    <div>
+    <div id="CopyToClipboard"
+         class="copybutton"
+         style="top: 3em;
+                left: calc(45vw - 8em);
+                -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+                background-color: rgba(255, 255, 255, 1);
+                border-radius: 4pt;"
+         onmousedown="pressdown(this)"
+         onmouseup="pullup(this)"
+         onclick="copyToClipboard()">Copy MathML</div>
+    <div id="CopiedMessage"
+         class="copiedMessage"
+         style="top: calc(3em - 1pt);
+                left: 45vw">MathML Copied</div>
+      <div>
       <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
                 style="float:left;
                        width: 50%;
@@ -420,25 +440,5 @@ navbar-links:
                 padding: 1em;
                 padding-left: 2em;
                 padding-right: 2em;">$${}$$</div>
-  <div id="CopyToClipboard" 
-       class="copybutton"
-       style="top: 3em;
-              left: calc(45vw - 8em);
-              -webkit-touch-callout: none;
-              -webkit-user-select: none;
-              -khtml-user-select: none;
-              -moz-user-select: none;
-              -ms-user-select: none;
-              -o-user-select: none;
-              user-select: none;
-              background-color: rgba(255, 255, 255, 1);
-              border-radius: 4pt;"
-       onmousedown="pressdown(this)"
-       onmouseup="pullup(this)"
-       onclick="copyToClipboard()">Copy MathML</div>
-  <div id="CopiedMessage"
-       class="copiedMessage"
-       style="top: calc(3em - 1pt);
-              left: 45vw">MathML Copied</div>
   </body>
 </html>
