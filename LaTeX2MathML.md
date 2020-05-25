@@ -394,18 +394,16 @@ layout: page
                   border-radius: 4pt;">
     </div>
     <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
-              style="width: 40vw;
+              style="width: 20vw;
                      resize: none;
                      background-color: rgba(250,250,250,1);
                      border: none;"
               placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
-    <div style="position: absolute;
-                top: 32em;
+    <div style="top: 32em;
                 left: 0em;">Rendering</div>
     <div id="MathOutput" class="mathoutputclass"
-         style="position: absolute;
-                top: 34em;
-                left: 0em;
+         style="top: 34vh;
+                left: 20em;
                 max-width: 90vw;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
