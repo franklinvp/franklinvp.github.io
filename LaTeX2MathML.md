@@ -395,13 +395,13 @@ navbar-links:
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
                 style="float:left;
-                       width: 20vw;
+                       width: 40%;
                        resize: none;
                        background-color: rgba(250,250,250,1);
                        border: none;"
                 placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
       <div style="float: right;
-                  width: 20vw;
+                  width: 40%;
                   height: 50vh;
                   resize: none;
                   overflow-x: auto;
@@ -417,12 +417,9 @@ navbar-links:
         <xmp id="MathMLRaw"></xmp>
       </div>    
     </div>
-    <div style="top: 32em;
-                left: 0em;">Rendering</div>
+    <div>Rendering</div>
     <div id="MathOutput" class="mathoutputclass"
-         style="top: 34vh;
-                left: 25vw;
-                max-width: 90vw;
+         style="max-width: 90vw;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
                 -ms-transform: translateY(-50%, -50%);
