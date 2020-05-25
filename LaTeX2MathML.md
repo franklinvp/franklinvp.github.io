@@ -355,13 +355,14 @@ navbar-links:
     </style>
   </head>
   <body id="uniqueidentifier" onload="recalling()" style="overflow-x:hidden;">
-    <div cols="35" rows="1"
+    <div cols="35" rows="2"
          style="resize: none;
+                height=3em;
                 background-color: rgba(250,250,250,0);
                 border:none;">
-       <input type="checkbox" id="display-inline" onchange = "toggleInlineDisplay(this)">Displayed equation</input>
-       <input type="checkbox" id="itags" checked="true" onchange = "toggleitags(this)">NS tags</input>
-       <input type="checkbox" id="NoBreakLines" onchange = "toggleBreakLines(this)">Compact</input>
+       <input type="checkbox" id="display-inline" onchange = "toggleInlineDisplay(this)"/>Displayed equation
+       <input type="checkbox" id="itags" checked="true" onchange = "toggleitags(this)"/>NS tags
+       <input type="checkbox" id="NoBreakLines" onchange = "toggleBreakLines(this)"/>Compact
     </div>
     <div class="tooltip" 
          onmousedown="pressdown(this)"
