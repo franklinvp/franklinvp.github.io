@@ -47,7 +47,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.hover-col | default: "#FF4F00" }};
 }
 blockquote {
   color: #808080;
@@ -456,7 +456,7 @@ footer .footer-custom-content {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.hover-col | default: "#FF4F00" }};
 }
 
 .post-preview .post-title {
@@ -527,7 +527,7 @@ footer .footer-custom-content {
 
 .blog-tags a:hover {
   border-radius: 2px;
-  color: {{ site.hover-col | default: "#0085A1" }};
+  color: {{ site.hover-col | default: "#FF4F00" }};
   background-color: #EEE;
 }
 
