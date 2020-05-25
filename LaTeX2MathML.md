@@ -402,15 +402,17 @@ navbar-links:
          class="copiedMessage"
          style="top: calc(3em - 1pt);
                 left: 45vw">MathML Copied</div>
-      <div>
+    <div>
       <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
                 style="float:left;
+                       top: 4em;
                        width: 50%;
                        resize: none;
                        background-color: rgba(250,250,250,1);
                        border: none;"
                 placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
       <div style="float: right;
+                  top: 4em;
                   width: 46%;
                   height: 50vh;
                   resize: none;
@@ -424,9 +426,10 @@ navbar-links:
                   box-shadow: 2px 2px 8px rgba(190, 190, 190, 1) inset;
                   border-radius: 4pt;
                   border: none;">
-        <xmp id="MathMLRaw"></xmp>
+          <xmp id="MathMLRaw"></xmp>
       </div>    
     </div>
+    <div style="height: 2em; width: 100%;"></div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
                 overflow: auto;
