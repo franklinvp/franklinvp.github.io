@@ -2,7 +2,6 @@
 layout: page
 ---
 
-<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8"/>
@@ -243,8 +242,8 @@ layout: page
        /* Tooltip container */
        .tooltip {
          visibility: visible;
-         position: absolute;
-         top: 1vh;
+         position: fixed;
+         top: 0em;
          display: inline-block;
 
          padding:5pt;
@@ -275,7 +274,7 @@ layout: page
          border-radius: 6px;
 
          /* Position the tooltip text */
-         position: absolute;
+         position: fixed;
          z-index: 2;
          left: 50vw;
          height:95vh;
@@ -307,7 +306,7 @@ layout: page
        border-radius: 6px;
 
        /* Position the tooltip text */
-       position: absolute;
+       position: fixed;
        z-index: 3;
        left: 50vw;
        height:95vh;
@@ -323,7 +322,7 @@ layout: page
        border-radius: 6px;
 
        /* Position the tooltip text */
-       position: absolute;
+       position: fixed;
        top: 1vh;
        left: 5vw;
        width: 1700px;
@@ -355,7 +354,7 @@ layout: page
   </head>
   <body id="uniqueidentifier" onload="recalling()" style="overflow-x:hidden;">
     <div cols="35" rows="1"
-         style="position: inherit;
+         style="position: fixed;
                 top: 0em;
                 left: 0em;
                 resize: none;
@@ -369,7 +368,7 @@ layout: page
               onchange = "toggleBreakLines(this)">Compact</input>
     </div>
     <div class="tooltip" 
-         style="position: absolute;
+         style="position: fixed;
                 top: 3em;
                 left: 0em;"
          onmousedown="pressdown(this)"
@@ -382,7 +381,7 @@ layout: page
                   border-radius: 4pt;">
     </div>
     <div class="tooltip" 
-         style="position: absolute;
+         style="position: fixed;
                 top: 6em;
                 left: 0em;"
          onmousedown="pressdown(this)"
@@ -395,7 +394,7 @@ layout: page
                   border-radius: 4pt;">
     </div>
     <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
-              style="position: absolute;
+              style="position: fixed;
                      top: 12em;
                      left: 0em;
                      width: 40vw;
