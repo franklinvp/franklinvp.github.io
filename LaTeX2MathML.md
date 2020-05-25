@@ -1,3 +1,8 @@
+---
+layout: page
+title: LaTeX to MathML
+---
+
 <!DOCTYPE html>
 <html>
   <head>

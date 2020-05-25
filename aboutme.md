@@ -3,10 +3,8 @@ layout: page
 title: About me
 ---
 
-My name is Franklin and my last name Vera Pacheco. I have the following qualities:
+My name is **Franklin** and my last name *Vera Pacheco*.
 
-- Don't like to talk about my qualities
-- Ready to change my mind or be stubborn
 - Ready to do mathematics and talk about it
 - Can write some music but can't talk about it
 
