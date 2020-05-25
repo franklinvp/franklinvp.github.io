@@ -428,7 +428,7 @@ navbar-links:
     </div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
-                top: 45em;
+                top: 50em;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
                 -ms-transform: translateY(-50%, -50%);
