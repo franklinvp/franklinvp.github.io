@@ -1,14 +1,12 @@
 ---
 layout: page
 navbar-links:
-  MathML Copied: 
 ---
 
 <html>
   <head>
     <meta charset="utf-8"/>
     <title>LaTeX to MathML</title>
-    <style>html body{background-color:rgb(240, 240, 240);font-family:Roboto;}</style>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
       extensions: ["tex2jax.js"],
@@ -22,7 +20,8 @@ navbar-links:
       "HTML-CSS": { availableFonts: ["TeX"]}
       });
     </script>
-    <script type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript"  
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"/>
     <script>
       function copyToClipboard() {
         var range = document.createRange();
@@ -369,27 +368,21 @@ navbar-links:
               onchange = "toggleBreakLines(this)">Compact</input>
     </div>
     <div class="tooltip" 
-         style="top: 3em;
-                left: 0em;"
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
          onclick="switchTip('img1', 'showtip')"
          ondblclick="switchTip('img1', 'bigtip')">Cheat sheet $1$
       <img id="img1" class="tooltiptext" src="assets/img/CheatSheet1.png" alt="Cheatsheet 1" 
-           style="top: -2em;
-                  box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
+           style="box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
                   border-radius: 4pt;">
     </div>
     <div class="tooltip" 
-         style="top: 6em;
-                left: 0em;"
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
          onclick="switchTip('img2', 'showtip')"
          ondblclick="switchTip('img2', 'bigtip')">Cheat sheet $2$
       <img id="img2" class="tooltiptext" src="assets/img/CheatSheet2.png" alt="Cheatsheet 2" 
-           style="top: -5em;
-                  box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
+           style="box-shadow: 2px 2px 8px rgba(100, 100, 100, 1);
                   border-radius: 4pt;">
     </div>
     <div>
@@ -417,7 +410,6 @@ navbar-links:
         <xmp id="MathMLRaw"></xmp>
       </div>    
     </div>
-    <div>Rendering</div>
     <div id="MathOutput" class="mathoutputclass"
          style="max-width: 90vw;
                 overflow: auto;
