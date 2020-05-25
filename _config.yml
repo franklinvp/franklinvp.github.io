@@ -13,11 +13,12 @@ author: Franklin Vera Pacheco
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-    - YouTube: "https://www.youtube.com/user/franklinvp"
-  Author's home: "https://franklinvp.github.io/"
+  YouTube: "https://www.youtube.com/user/franklinvp"
+  #Resources:
+  #  - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #  - Learn markdown: "https://www.markdowntutorial.com/"
+  #  - YouTube: "https://www.youtube.com/user/franklinvp"
+  #Author's home: "https://franklinvp.github.io/"
 
 # --- Logo --- #
 
