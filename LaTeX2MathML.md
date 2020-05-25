@@ -396,7 +396,7 @@ navbar-links:
          onclick="copyToClipboard()">Copy MathML</div>
     <div id="CopiedMessage"
          class="copiedMessage"
-         style="top: calc(3em - 1pt);">MathML Copied</div>
+         style="top: calc(3em - 1pt); z-index:1">MathML Copied</div>
     <div>
       <textarea id="LaTeXInputBox" cols="70" rows="15" oninput="UpdateMath(this.value)" 
                 style="float:left;
