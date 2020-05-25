@@ -93,7 +93,7 @@ Assume that the two multisets $\\{\\{x_1,x_2,...,x_n\\}\\}$ and $\\{\\{y_1,y_2,\
 $$
 \begin{align}
 X'&=\\{\\{x_1,x_2,...,x_n,y_1+a,y_2+a,\ldots,y_n+a\\}\\}\\
-Y'\\{\\{x_1+a,x_2+a,\ldots,x_n+a,y_1,y_2,\ldots,y_n\\}\\}
+Y'&\\{\\{x_1+a,x_2+a,\ldots,x_n+a,y_1,y_2,\ldots,y_n\\}\\}
 \end{align}
 $$
 
