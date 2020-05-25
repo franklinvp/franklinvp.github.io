@@ -398,7 +398,7 @@ navbar-links:
     <div id="CopiedMessage"
          class="copiedMessage"
          style="position:absolute; top: calc(30em - 1pt); z-index:10">MathML Copied</div>
-    <div style="top:6em;">
+    <div style="margin-top:1em; top:6em;">
       <textarea id="LaTeXInputBox" cols="70" rows="15" oninput="UpdateMath(this.value)" 
                 style="float:left;
                        top: 7em;
