@@ -354,47 +354,13 @@ layout: page
     </style>
   </head>
   <body id="uniqueidentifier" onload="recalling()" style="overflow-x:hidden;">
-    <div style="position:absolute;
-              width: 100vw;
-              top: 0pt;
-              left: 0pt;
-              right: 0pt;
-              height: 5pt;
-              z-index: 5;
-              background-color: #0f4c81;"></div>
     <div cols="35" rows="1"
          style="position: absolute;
-                top: 1em;
-                left: 1vw;
+                top: 0em;
+                left: 0em;
                 resize: none;
                 background-color: rgba(250,250,250,0);
                 border:none;">
-      <a href="index.html">
-      <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <mi>L</mi>
-        <mspace width="-.325em" />
-        <mpadded height="+.21em" depth="-.21em" voffset="+.21em">
-          <mrow class="MJX-TeXAtom-ORD">
-            <mstyle displaystyle="false" scriptlevel="1">
-              <mrow class="MJX-TeXAtom-ORD">
-                <mi>A</mi>
-              </mrow>
-            </mstyle>
-          </mrow>
-        </mpadded>
-        <mspace width="-.17em" />
-        <mi>T</mi>
-        <mspace width="-.14em" />
-        <mpadded height="-.5ex" depth="+.5ex" voffset="-.5ex">
-          <mrow class="MJX-TeXAtom-ORD">
-            <mi>E</mi>
-          </mrow>
-        </mpadded>
-        <mspace width="-.115em" />
-        <mi>X</mi>
-        <mo stretchy="false">&#x2192;<!-- → --></mo>
-        <mi>MathML</mi>
-      </math>&nbsp;&nbsp;</a>
        <input type="checkbox" id="display-inline"
               onchange = "toggleInlineDisplay(this)">Displayed equation</input>
        <input type="checkbox" id="itags" checked="true"
@@ -405,7 +371,7 @@ layout: page
     <div class="tooltip" 
          style="position: absolute;
                 top: 3em;
-                left: 2em;"
+                left: 0em;"
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
          onclick="switchTip('img1', 'showtip')"
@@ -418,7 +384,7 @@ layout: page
     <div class="tooltip" 
          style="position: absolute;
                 top: 6em;
-                left: 2em;"
+                left: 0em;"
          onmousedown="pressdown(this)"
          onmouseup="pullup(this)"
          onclick="switchTip('img2', 'showtip')"
@@ -431,7 +397,7 @@ layout: page
     <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
               style="position: absolute;
                      top: 12em;
-                     left: 2vw;
+                     left: 0em;
                      width: 40vw;
                      resize: none;
                      background-color: rgba(250,250,250,1);
@@ -439,11 +405,11 @@ layout: page
               placeholder="\text{Input LaTeX here}\rightarrow\LaTeX=mc^2"></textarea>
     <div style="position: absolute;
                 top: 32em;
-                left: 2vw;">Rendering</div>
+                left: 0em;">Rendering</div>
     <div id="MathOutput" class="mathoutputclass"
          style="position: absolute;
                 top: 34em;
-                left: 2vw;
+                left: 0em;
                 max-width: 90vw;
                 overflow: auto;
                 background-color: rgba(255,255,255,0.9);
