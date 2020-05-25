@@ -400,7 +400,7 @@ navbar-links:
          style="top: calc(3em - 1pt);
                 left: 45vw">MathML Copied</div>
     <div>
-      <textarea id="LaTeXInputBox" cols="70" rows="20" oninput="UpdateMath(this.value)" 
+      <textarea id="LaTeXInputBox" cols="70" rows="15" oninput="UpdateMath(this.value)" 
                 style="float:left;
                        top: 4em;
                        width: 50%;
@@ -411,7 +411,7 @@ navbar-links:
       <div style="float: right;
                   top: 4em;
                   width: 46%;
-                  height: 50vh;
+                  height: 45vh;
                   resize: none;
                   overflow-x: auto;
                   overflow-y: auto;
