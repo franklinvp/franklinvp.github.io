@@ -188,6 +188,7 @@ img {
 .navbar-custom .navbar-nav .dropdown-item:hover,
 .navbar-custom .navbar-nav .dropdown-item:focus {
   color: {{ site.hover-col | default: "#ffffff" }};
+  background-color: "#463500";
 }
 
 .navbar-custom .navbar-nav .nav-item {
@@ -211,6 +212,7 @@ img {
 }
 
 .navbar-toggler {
+  color: white;
   font-size: 1rem;
   margin: 0.5rem 0;
 }
