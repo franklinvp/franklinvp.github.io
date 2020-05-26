@@ -123,8 +123,8 @@ navbar-links:
         divfigure.style = 'margin:0pt;padding:0pt;border:0pt none;background-color:rgba(240,240,240,0.66);width:99vw;height:99vh;';
         divfigure.appendChild(figure);
           
-        var content = document.getElementByName('footer');
-        document.body.insertBefore(divfigure, content);
+        //var content = document.getElementByName('footer');
+        document.body.insertBefore(divfigure, document.body.firstChild);
       };
       
       var hairs_moving = 0;
