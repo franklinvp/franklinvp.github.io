@@ -87,7 +87,8 @@ Therefore, $n$ must be a power of $2$.
 **Claim 2:**  
 For $n=2^k$, there are multisets $S=\\{\\{s_1,s_2,\ldots,s_{m}\\}\\}$, with $m=\frac{n(n-1)}{2}$ that are the pairwise sums of more than one multiset $A=\\{\\{a_1,a_2,\ldots,a_n\\}\\}$.
 
-**Proof of Claim 2 [Doubling the size of the example]**[^1]  
+**Proof of Claim 2 [Doubling the size of the example]**[^1]
+
 Assume that the two multisets $\\{\\{x_1,x_2,...,x_n\\}\\}$ and $\\{\\{y_1,y_2,\ldots,y_n\\}\\}$ produce the same multiset of pairwise sums $S$. Let $a\neq0$. Then the multisets 
 
 $$
