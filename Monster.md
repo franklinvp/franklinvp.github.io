@@ -132,10 +132,10 @@ navbar-links:
         var animation = document.getElementById(the_id);
         animation.beginElement()
         hairs_moving += 1;
-        var message = document.createElement('p');
-        message.id = 'alertmessage';
-        var body = document.getElementById('content-container');
-        body.appendChild(message);
+        //var message = document.createElement('p');
+        //message.id = 'alertmessage';
+        //var body = document.getElementById('content-container');
+        //body.appendChild(message);
         
         if (hairs_moving > 5) {
           for (var t = 0; t < 100; t++){
@@ -145,14 +145,14 @@ navbar-links:
           var collapse = document.getElementById('collapse' + (t).toString());
           collapse.beginElement();
           };
-          var message = document.getElementById('alertmessage');
-          message.innerHTML = 'You&#39;ve killed the poor hairy monster!<br/> Now we need to give you a fresh one!';
-          message.style = 'font-size:20pt';
+          //var message = document.getElementById('alertmessage');
+          //message.innerHTML = 'You&#39;ve killed the poor hairy monster!<br/> Now we need to give you a fresh one!';
+          //message.style = 'font-size:20pt';
           window.setTimeout(partB,5000);
         } else {
-          var message = document.getElementById('alertmessage');
-          message.innerHTML = 'The monster&#39;s awake and needs computing power!<br/>Quick! Click it into surrender!';
-          message.style = 'font-size:15pt';
+          //var message = document.getElementById('alertmessage');
+          //message.innerHTML = 'The monster&#39;s awake and needs computing power!<br/>Quick! Click it into surrender!';
+          //message.style = 'font-size:15pt';
           };
       };
       
