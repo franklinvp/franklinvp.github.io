@@ -14,6 +14,7 @@ author: Franklin Vera Pacheco
 navbar-links:
   About Me: "aboutme"
   YouTube: "https://www.youtube.com/user/franklinvp"
+  Soundcloud: "https://soundcloud.com/franklin-vera-pacheco"
   LaTeX to MathML: "LaTeX2MathML"
   #Resources:
   #  - Beautiful Jekyll: "https://beautifuljekyll.com"
@@ -43,7 +44,7 @@ avatar: "/assets/img/avatar-icon.jpg"
 social-network-links:
   email: "franklindptvpatgmaildotcom"
   facebook: no
-  github: franklinvp
+  github: "franklinvp"
   twitter: no
   rss: true
 #  reddit: yourname
