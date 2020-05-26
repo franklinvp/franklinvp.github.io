@@ -123,7 +123,7 @@ navbar-links:
         divfigure.style = 'margin:0pt;padding:0pt;border:0pt none;background-color:rgba(240,240,240,0.66);width:99vw;height:99vh;';
         divfigure.appendChild(figure);
           
-        var content = document.getElementById('content-container');
+        var content = document.getElementByName('footer');
         document.body.insertBefore(divfigure, content);
       };
       
