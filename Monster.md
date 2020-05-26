@@ -120,7 +120,7 @@ navbar-links:
         var divfigure = document.createElement('div');
         divfigure.id = 'divfigure';
         //divfigure.setAttribute('onclick', 'moveHair()');
-        divfigure.style = 'margin:0pt;padding:0pt;border:0pt none;background-color:rgba(240,240,240,0.66);position:absolute;top:0vh;left:0vw;width:99vw;height:99vh;';
+        divfigure.style = 'margin:0pt;padding:0pt;border:0pt none;background-color:rgba(240,240,240,0.66);top:0vh;left:0vw;width:99vw;height:99vh;';
         divfigure.appendChild(figure);
           
         var content = document.getElementById('content-container');
