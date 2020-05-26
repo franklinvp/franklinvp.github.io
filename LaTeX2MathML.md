@@ -238,7 +238,7 @@ navbar-links:
 
        .copybutton:not(.no-hover):hover {
          background-color:rgb(255, 255, 255);
-         box-shadow: 2px 2px 8px rgba(50, 0, 0, 1);
+         box-shadow: 2px 2px 8px rgba(50, 50, 50, 1);
        }
 
        /* Tooltip container */
@@ -261,7 +261,7 @@ navbar-links:
 
        .tooltip:not(.no-hover):hover {
          background-color:rgb(255, 255, 255);
-         box-shadow: 2px 2px 8px rgba(50, 0, 0, 1);
+         box-shadow: 2px 2px 8px rgba(50, 50, 50, 1);
        }
 
        /* Tooltip text */
