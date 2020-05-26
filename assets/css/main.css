@@ -764,8 +764,8 @@ footer .footer-custom-content {
 .pagination .page-item .page-link:hover,
 .pagination .page-item .page-link:focus {
   color: #FFF;
-  border: 1px solid {{ site.hover-col | default: "#0085A1" }};
-  background-color: {{ site.hover-col | default: "#0085A1" }};
+  border: 1px solid {{ site.hover-col | default: "#C79A0A" }};
+  background-color: {{ site.hover-col | default: "#C79A0A" }};
 }
 
 /* --- Tables --- */
