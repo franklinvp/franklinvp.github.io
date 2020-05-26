@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Number tomography
-subtitle: A cute problem that my students got in a competition
+title: Planting trees
+subtitle: Getting some evergreens
 ---
 
 ### Planting a few trees
 
-A pair of Gold Star Junipers
+A pair of Gold Star Junipers. Last year we planted some in the front garden. Now it is the backyard's turn to get some trees. Anough of all this grass. This is not a golf course.
 
 ![Gold Star Junipers](../assets/img/goldstarjunipers.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
