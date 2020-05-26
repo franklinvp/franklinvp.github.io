@@ -162,6 +162,5 @@ navbar-links:
     </script>
   </head>
   <body>
-    <div id="content-container"></div>
   </body>
 </html>
