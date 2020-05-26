@@ -9,8 +9,6 @@ navbar-links:
     <title>All posts</title>
   </head>
   <body>
-    {{ content }}
-
     {% assign posts = paginator.posts | default: site.posts %}
 
     <div class="posts-list">
