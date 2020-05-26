@@ -177,6 +177,10 @@ img {
   height: 2.5rem;
 }
 
+.navbar-custom .navbar-nav .dropdown-item {
+  color: white;
+}
+
 .navbar-custom .navbar-brand:hover,
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .navbar-nav .nav-link:hover,
