@@ -341,7 +341,7 @@ navbar-links:
         padding: 5pt;
         border-radius:4pt;
         background-color:rgba(255,255,224, 0.9);
-        box-shadow: 0px 0px 8px rgba(50, 0, 0, 1);
+        box-shadow: 0px 0px 8px rgba(50, 50, 50, 1);
       } 
 
       .copiedMessageFade {
