@@ -2,7 +2,6 @@
 layout: post
 title: Number tomography
 subtitle: A cute problem that my students got in a competition
-date 2020-05-26 00:00:03
 ---
 
 This problem has appeared in many math competitions. It is quite interesting and connects to a lot of interesting mathematics.

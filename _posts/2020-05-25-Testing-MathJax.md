@@ -2,7 +2,6 @@
 layout: post
 title: Testing MathJax
 subtitle: Just to see if MathJax works here
-date: 2020-05-24 00:00:02
 ---
 
 This is a like of text with and equation $a^2+b^2=c^2$.

@@ -1,0 +1,13 @@
+I"Y<p>This is a like of text with and equation $a^2+b^2=c^2$.</p>
+
+\[\sum_{n=0}^{\infty}2^{-n}=2\]
+
+<p>Let’s see if a commutative diagram works.</p>
+
+\[\require{AMScd}
+\begin{CD}
+\mathbb{Z}/p^n\mathbb{Z} @&gt;{\theta_{n+1,\alpha}}&gt;&gt; U_1/U_{n+1}\\
+@VVV @VVV\\
+\mathbb{Z}/p^{n-1}\mathbb{Z} @&gt;{\theta_{n,\alpha}}&gt;&gt; U_1/U_n
+\end{CD}\]
+:ET

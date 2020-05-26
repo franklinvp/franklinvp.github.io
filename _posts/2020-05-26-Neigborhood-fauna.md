@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Neighborhood fauna
-date 2020-05-26 00:00:02
 ---
 
 ### Beaver
