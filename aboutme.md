@@ -1,6 +1,8 @@
 ---
 layout: page
 title: About me
+page-col: "#000000"
+text-col: "#FFFFFF"
 ---
 
 My name is **Franklin** and my last name *Vera Pacheco*.
@@ -22,3 +24,5 @@ My name is **Franklin** and my last name *Vera Pacheco*.
 ### Goofy living room
 ![Franklin Vera Pacheco](assets/img/404oops.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
 
+### At the Malecon in Havana
+![Malecon](assets/img/Malecon.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
