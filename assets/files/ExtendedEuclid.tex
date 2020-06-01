@@ -2,6 +2,83 @@
 
 \usepackage{amsmath}
 \usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand{\cfracdots}{ }
+  {
+   \rule{0pt}{1.5\baselineskip}
+   \raisebox{.5\baselineskip}{\enspace$\ddots$\enspace}
+  }
+\NewDocumentCommand{\cfraccdots}{}{\cdots}
+\NewDocumentCommand{\cfracddots}{}{\ddots}
+\NewDocumentCommand{\cfracldots}{}{\ldots}
+
+\NewDocumentCommand{\xcontfrac}{ s O{c} >{\SplitArgument{1}{;}}m }
+  { 
+   \IfBooleanTF{#1}
+     { \cfrac_inline:nn #3 }
+     { \cfrac_map:nnn { #2 } #3 }
+  }
+
+\cs_new:Npn \cfrac_inline:nn #1 #2
+  {
+   \IfNoValueTF { #2 }
+     {
+      \tl_use:N \c_cfrac_message_tl
+      \xcontfrac*{;#1}
+     }
+     {
+      \group_begin:
+      \cs_set_eq:NN \cfracdots \dots
+      [\, \tl_if_empty:nTF { #1 } { 0 } { #1 } ; #2 \,]
+      \group_end:
+     }
+  }
+
+\tl_const:Nn \c_cfrac_lbrace_tl { \if_true:  { \else: } \fi: }
+\tl_const:Nn \c_cfrac_rbrace_tl { \if_false: { \else: } \fi: }
+\tl_const:Nn \c_cfrac_strut_tl { \vrule width 0pt depth .3\baselineskip }
+\tl_new:N \l_cfrac_left_tl
+\tl_new:N \l_cfrac_right_tl
+\msg_new:nnn { cfrac } { wrong-syntax }
+  {
+   Wrong~syntax~for~\token_to_str:N \xcontfrac,~
+   assuming~0~in~the~integer~part,~on~line~\msg_line_number:.
+  }
+
+\cs_new:Npn \cfrac_map:nnn #1 #2 #3
+  {
+   \tl_clear:N \l_cfrac_left_tl \tl_clear:N \l_cfrac_right_tl
+   \IfNoValueTF { #3 }
+     { 
+      \msg_warning:nn { cfrac } { wrong-syntax }
+      \xcontfrac[#1]{;#2}
+     }
+     {
+      \tl_if_empty:nTF { #2 }
+        { \cfrac_map_aux:nn { #1 } { \exp_not:N \use_none:n , #3 } }
+        { \cfrac_map_aux:nn { #1 } { #2 , #3 } }
+     }
+  }
+\cs_new:Npn \cfrac_map_aux:nn #1 #2
+  {
+   \clist_map_inline:nn { #2 }
+     {
+      \tl_put_right:Nn \l_cfrac_left_tl { \cfrac_begin:nn { #1 } { ##1 } }
+      \tl_put_right:Nn \l_cfrac_right_tl { \exp_not:N \c_cfrac_rbrace_tl }
+     }
+   \tl_set:Nx \l_cfrac_left_tl
+     { \l_cfrac_left_tl \c_cfrac_strut_tl \l_cfrac_right_tl }
+   \tl_set:Nx \l_cfrac_left_tl { \l_cfrac_left_tl }
+   \exp_after:wN \use_none:nnnnnn \l_cfrac_left_tl
+  }
+\cs_new:Npn \cfrac_begin:nn #1 #2
+  {
+   \exp_not:n
+     { + \exp_not:N \cfrac[#1] { 1 } \c_cfrac_lbrace_tl \exp_not:N \mathstrut #2 }
+  }
+\ExplSyntaxOff
+
 \usepackage{listings}
 \usepackage{color}
 
@@ -264,4 +341,14 @@ def xgcd(a, b):
 \noindent\textbf{Note:} To copy this code into a Python interpreter, remember that in Python the indentation of the lines is important. So, give $4$ spaces to indent each indented line.
 
 Executing \lstinline{xgcd(2519,377)} we get \lstinline{(1,-22,147)}. So, the example should be OK (or both the example and the Python code are wrong).
+
+\section*{Continued fractions}
+
+A byproduct of the output of the Extended Euclid's Algorithm for the input $a,b$, with $a\geq b$, is a \emph{continued fraction} expansion of the rational number $\frac{a}{b}$. With the notation above, we get that 
+
+$$\frac{a}{b}=\frac{r_0}{r_1}=\xcontfrac{q_0;q_1,q_2,\cfracdots,q_n}$$
+
+
+
+
 \end{document}
