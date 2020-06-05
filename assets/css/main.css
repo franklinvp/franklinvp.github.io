@@ -459,13 +459,13 @@ footer .footer-custom-content {
 }
 
 .post-preview a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #404040;
 }
 
 .post-preview a:focus,
 .post-preview a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   color: {{ site.hover-col | default: "#FF4F00" }};
 }
 
@@ -531,7 +531,7 @@ footer .footer-custom-content {
 
 .blog-tags a {
   color: {{ site.link-col | default: "#008AFF" }};
-  text-decoration: none;
+  text-decoration: underline;
   padding: 0 0.3125rem;
 }
 
