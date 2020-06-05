@@ -35,9 +35,15 @@ $$Z(G_1\times G_2,s_1,s_2,\ldots,s_{n_1\cdot n_2}) = Z(G_1,s_1,\ldots,s_{n_1})\o
 
 where the product $$\otimes$$ (In the paper they use the symbol [text reference mark](https://en.wikipedia.org/wiki/Reference_mark)) of polynomials is defined by:
 
-If $$f(x_1,x_2,...,x_m)=\sum a_{i_1i_2\ldots i_m}x_1^{i_1}x_2^{i_2}\dotsm x_m^{i_m}\text{ and }g(x_1,x_2,...,x_n)=\sum b_{j_1j_2\ldots j_n}x_1^{j_1}x_2^{j_2}\dotsm x_n^{j_n}$$ then $$f(x_1,x_2,\ldots,x_m)\otimes g(x_1,x_2,\ldots,x_n)=\sum a_{i_1i_2\ldots i_m}b_{j_1j_2\ldots j_n}\times\prod_{\substack{1\leq r\leq m\\1\leq s\leq n}}(x_{r}^{i_l}\otimes x_{s}^{j_s})$$
+If 
 
-and 
+$$f(x_1,x_2,...,x_m)=\sum a_{i_1i_2\ldots i_m}x_1^{i_1}x_2^{i_2}\dotsm x_m^{i_m}\text{ and }g(x_1,x_2,...,x_n)=\sum b_{j_1j_2\ldots j_n}x_1^{j_1}x_2^{j_2}\dotsm x_n^{j_n}$$ 
+
+then 
+
+$$f(x_1,x_2,\ldots,x_m)\otimes g(x_1,x_2,\ldots,x_n)=\sum a_{i_1i_2\ldots i_m}b_{j_1j_2\ldots j_n}\times\prod_{\substack{1\leq r\leq m\\1\leq s\leq n}}(x_{r}^{i_l}\otimes x_{s}^{j_s})$$
+
+where
 
 $$x_{r}^{i_l}\otimes x_{s}^{j_s} = x_{\operatorname{lcm}(r,s)}^{\gcd(r,s)i_rj_s}$$
 
