@@ -63,6 +63,6 @@ $$Z(S_n,s_1,s_2,\ldots,s_n)=\sum_{r_1+2r_2+3r_3+\ldots nr_n=n}\frac{s_1^{r_1}s_2
 
 Combining the results above we obtain that the number of classes of $w\times h$ matrices on $s$ symbols up to permutations of the rows and columns is
 
-$$N=\frac{1}{w!h!}\sum_{i\in P(W)}\sum_{j\in P(H)}\frac{w!}{1^{i_1}i_1!2^{i_2}i_2!\dotsm w^{i_w}i_w!}\frac{h!}{1^{j_1}j_1!2^{j_2}j_2!\dotsm h^{j_h}j_h!}s^{\sum_{a\in i}\sum_{b\in j}\gcd(a,b)}$$
+$$N=\frac{1}{w!h!}\sum_{\substack{i\in P(W)\\j\in P(H)}}\frac{w!}{1^{i_1}i_1!2^{i_2}i_2!\dotsm w^{i_w}i_w!}\frac{h!}{1^{j_1}j_1!2^{j_2}j_2!\dotsm h^{j_h}j_h!}s^{\sum_{\substack{a\in i\\b\in j}}\gcd(a,b)}$$
 
 where the outer sums runs over the partitions $i=(i_1,i_2,\ldots,i_w)$ and $j=(j_1,j_2,\ldots,j_h)$ of $w$ and $h$, respectively. This is, $i_1+2i_2+\ldots+wi_w=w$ and $j_1+2j_2+\ldots+hj_h=h$. The inner sums run over the elements $a$ and $b$ of the partitions $i$ and $j$. This is, $a$ takes the value $1$, $i_1$ times, the value $2$ $i_2$ times, and so on and likewise $b$ takes the value $1$ $j_1$ times, the value $2$ $j_2$ times, etc.
