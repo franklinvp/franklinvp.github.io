@@ -25,7 +25,9 @@ $$Z(G,s_1,s_2,s_3,\ldots,s_n)=|G|^{-1}\sum_{g\in G}\prod_{k=1}^{n}s_k^{c_k(g)}$$
 
 where $c_k(g)$ is the number of cycles of length $k$ in the cycle decomposition of the permutation $g$.
 
-**Polya's enumeration theorem** tell us that $$\left|S^X/G\right|=Z(G,s,s,\ldots,s)=|G|^{-1}\sum_{g\in G}s^{c_k(g)}$$
+**Polya's enumeration theorem** tell us that 
+
+$$\left|S^X/G\right|=Z(G,s,s,\ldots,s)=|G|^{-1}\sum_{g\in G}s^{c_k(g)}$$
 
 ### Cycle index of the Cartesian product
 
