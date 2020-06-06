@@ -43,12 +43,10 @@ h4 {
   font-size: 1.125rem;
 }
 a {
-  text-decoration: underline;
   color: {{ site.link-col | default: "#0f4c81" }};
 }
 a:hover,
 a:focus {
-  text-decoration: underline;
   color: {{ site.hover-col | default: "#FF4F00" }};
 }
 blockquote {
