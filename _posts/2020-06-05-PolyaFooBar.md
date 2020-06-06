@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polya enumeration theorem applied to a foobar
+title: Polya Enumeration Theorem applied to a Google foobar challenge
 subtitle: Nice combinatorial theorem + implementation
 ---
 
