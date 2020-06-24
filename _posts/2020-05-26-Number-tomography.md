@@ -114,5 +114,7 @@ We start with $0$ as its first element. At every step we repeat the elements of 
 
 If $n=2^k$, for some integer $k$, we can write the numbers $0,1,2,\ldots,2^{k+1}-1$ above the elements of the Thue-Morse sequence. Let $A$ be the set of all numbers above a $0$ from the Thue-Morse sequence and $B$ the set of those above a $1$. The sets $A$ and $B$ are each of size $2^k$ and have the property of producing the same multiset of pairwise sums.
 
+A [presentation](../assets/files/Talk.pdf) for my young students.
+
 [^1]: Selfridge and Straus, *On the determination of numbers by their sums of a fixed order*, 1958.  
 [^2]: Andreescu and Savchev, *Mathematical Miniatures*, 2003.
