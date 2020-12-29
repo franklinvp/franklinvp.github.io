@@ -4,15 +4,22 @@ title: Keeping busy during the holidays
 subtitle: No more walls to repaint
 ---
 
-After repainting the guest's bathroom, I built two wooden benches.
+I built two wood benches.
+The benches have the back legs near the ends and the front ones closer to the center.
+Each pair on one side forms a square the same side of the depth of the bench.
+The pieces of furniture looks like they just landed a _pas de chat_.
+They were both quickly colonized by an army of potted plants.
 
-Read 
+Later we repainted the guest's bathroom and I read
 
 ![One flew over the cuckoo's nest](../assets/img/cuckoo.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
 
+<p style="text-align: center;">But it's the truth even if it didn't happen</p>
 
-Installed [Sibelius](https://www.avid.com/sibelius), which I had not used for a while to write
-*music*. So, today I wrote this
+Installed [Sibelius](https://www.avid.com/sibelius), which I had not used for a while to write *music*, or mess room dissorder of notes that I make to pass the time, 
+or whatever you want to call it.
+
+So, today I wrote this
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iWw_prL0nF0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
+
