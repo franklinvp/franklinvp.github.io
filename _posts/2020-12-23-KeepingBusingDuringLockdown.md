@@ -23,3 +23,7 @@ So, today I wrote this
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TNhQSl9ukgU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+and the next afternoon this
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uirNnDXwJHA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
