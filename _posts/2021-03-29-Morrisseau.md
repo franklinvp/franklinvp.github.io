@@ -4,7 +4,7 @@ title: Sacred Bear Healer
 subtitle: My first acquisition as an art collector
 ---
 
-One of the requirements to be a Canadian, more important that being born in Canada, more important than a Canadian passport, is to own a print by [Norval Morrisseau](https://en.wikipedia.org/wiki/Norval_Morrisseau) or Copper Thunderbird, the Picasso of the north.
+One of the requirements to be a Canadian, more important than being born in Canada, more important than a Canadian passport, is to own a print by [Norval Morrisseau](https://en.wikipedia.org/wiki/Norval_Morrisseau) or Copper Thunderbird, the Picasso of the north.
 
 So, now I am the proud owner of (a limited edition print of) Sacred Bear Healer
 
