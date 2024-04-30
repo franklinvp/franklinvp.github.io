@@ -1,0 +1,354 @@
+\documentclass{amsart}
+
+\usepackage{amsmath}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{xparse}
+\ExplSyntaxOn
+\NewDocumentCommand{\cfracdots}{ }
+  {
+   \rule{0pt}{1.5\baselineskip}
+   \raisebox{.5\baselineskip}{\enspace$\ddots$\enspace}
+  }
+\NewDocumentCommand{\cfraccdots}{}{\cdots}
+\NewDocumentCommand{\cfracddots}{}{\ddots}
+\NewDocumentCommand{\cfracldots}{}{\ldots}
+
+\NewDocumentCommand{\xcontfrac}{ s O{c} >{\SplitArgument{1}{;}}m }
+  { 
+   \IfBooleanTF{#1}
+     { \cfrac_inline:nn #3 }
+     { \cfrac_map:nnn { #2 } #3 }
+  }
+
+\cs_new:Npn \cfrac_inline:nn #1 #2
+  {
+   \IfNoValueTF { #2 }
+     {
+      \tl_use:N \c_cfrac_message_tl
+      \xcontfrac*{;#1}
+     }
+     {
+      \group_begin:
+      \cs_set_eq:NN \cfracdots \dots
+      [\, \tl_if_empty:nTF { #1 } { 0 } { #1 } ; #2 \,]
+      \group_end:
+     }
+  }
+
+\tl_const:Nn \c_cfrac_lbrace_tl { \if_true:  { \else: } \fi: }
+\tl_const:Nn \c_cfrac_rbrace_tl { \if_false: { \else: } \fi: }
+\tl_const:Nn \c_cfrac_strut_tl { \vrule width 0pt depth .3\baselineskip }
+\tl_new:N \l_cfrac_left_tl
+\tl_new:N \l_cfrac_right_tl
+\msg_new:nnn { cfrac } { wrong-syntax }
+  {
+   Wrong~syntax~for~\token_to_str:N \xcontfrac,~
+   assuming~0~in~the~integer~part,~on~line~\msg_line_number:.
+  }
+
+\cs_new:Npn \cfrac_map:nnn #1 #2 #3
+  {
+   \tl_clear:N \l_cfrac_left_tl \tl_clear:N \l_cfrac_right_tl
+   \IfNoValueTF { #3 }
+     { 
+      \msg_warning:nn { cfrac } { wrong-syntax }
+      \xcontfrac[#1]{;#2}
+     }
+     {
+      \tl_if_empty:nTF { #2 }
+        { \cfrac_map_aux:nn { #1 } { \exp_not:N \use_none:n , #3 } }
+        { \cfrac_map_aux:nn { #1 } { #2 , #3 } }
+     }
+  }
+\cs_new:Npn \cfrac_map_aux:nn #1 #2
+  {
+   \clist_map_inline:nn { #2 }
+     {
+      \tl_put_right:Nn \l_cfrac_left_tl { \cfrac_begin:nn { #1 } { ##1 } }
+      \tl_put_right:Nn \l_cfrac_right_tl { \exp_not:N \c_cfrac_rbrace_tl }
+     }
+   \tl_set:Nx \l_cfrac_left_tl
+     { \l_cfrac_left_tl \c_cfrac_strut_tl \l_cfrac_right_tl }
+   \tl_set:Nx \l_cfrac_left_tl { \l_cfrac_left_tl }
+   \exp_after:wN \use_none:nnnnnn \l_cfrac_left_tl
+  }
+\cs_new:Npn \cfrac_begin:nn #1 #2
+  {
+   \exp_not:n
+     { + \exp_not:N \cfrac[#1] { 1 } \c_cfrac_lbrace_tl \exp_not:N \mathstrut #2 }
+  }
+\ExplSyntaxOff
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ 
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}; should come as last argument
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  firstnumber=1000,                % start line enumeration with line 1000
+  frame=single,	                   % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=none,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,	                   % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+
+\newmdtheoremenv{theorem}{Theorem}
+\newtheorem{example}{Example}
+
+\newcounter{theo}[section]\setcounter{theo}{0}
+\newenvironment{theo}[2][]{%
+    \refstepcounter{theo}
+    \ifstrempty{#1}%
+% if condition (without title)
+{\mdfsetup{%
+    frametitle={%
+        \tikz[baseline=(current bounding box.east),outer sep=0pt]
+        \node[anchor=east,rectangle,fill=blue!20]
+        {\strut Theorem~\thetheo};}
+    }%
+% else condition (with title)
+}{\mdfsetup{%
+    frametitle={%
+        \tikz[baseline=(current bounding box.east),outer sep=0pt]
+        \node[anchor=east,rectangle,fill=blue!20]
+        {\strut Theorem~\thetheo:~#1};}%
+    }%
+}%
+% Both conditions
+\mdfsetup{%
+    innertopmargin=10pt,linecolor=blue!20,%
+    linewidth=2pt,topline=true,%
+    frametitleaboveskip=\dimexpr-\ht\strutbox\relax%
+}
+\begin{mdframed}[]\relax}{%
+\end{mdframed}}
+
+\newcounter{lem}[section]\setcounter{lem}{0}
+\renewcommand{\thelem}{\arabic{section}.\arabic{lem}}
+\newenvironment{lem}[2][]{%
+\refstepcounter{lem}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=green!20]
+{\strut ~\thelem};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=green!20]
+{\strut ~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=green!20,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}
+{\end{mdframed}}
+
+\begin{document}
+\title{Euclid's extended algorithm and applications}
+\author{Franklin}
+\maketitle
+
+The foundation of the algorithm is the following theorem
+
+\begin{theo}[Euclidean division theorem]{}\label{euclid}
+If $a,b$ are integers, then there exist integers $q,r$, such that 
+\begin{align*}
+a&=bq+r\\
+0&\leq r<|b|
+\end{align*}
+\end{theo}
+
+\begin{lem}[Extended Euclidean Algorithm]{}
+\noindent\textbf{Input:} Two integers $a$ and $b$. The input could also be two polynomials, or in general anything that satisfies Theorem \ref{euclid}.
+
+\noindent\textbf{Algorithm:}
+\begin{itemize}
+\item \textbf{Step 1:} If $b>a$, then swap $a$ and $b$. In other words, assume that $a\geq b$.
+\item \textbf{Step 2:} Call $r_{0}=a$ and $r_1=b$ and set $i=0$.
+\item \textbf{Step 3:} While $r_{i+1}\neq 0$, divide $r_{i}$ by $r_{i+1}$ as in Theorem \ref{euclid} $$r_{i}=r_{i+1}q_{i}+r_{i+2}$$ and increment $i$.
+\end{itemize}
+
+\noindent\textbf{Output:}
+The algorithm outputs all the equations obtained in the loop of Step 2.
+These are 
+\begin{align*}
+r_{0}&=r_1q_0+r_2\\
+r_1&=r_2q_1+r_3\\
+r_2&=r_3q_2+r_4\\
+\vdots&\phantom{{}={}}\vdots\\
+r_{n-1}&=r_{n}q_{n-1}+r_{n+1}\\
+r_{n}&=r_{n+1}q_{n} + 0
+\end{align*}
+\end{lem}
+
+
+The algorithm always ends when the last remainder computed is $0$.
+
+\section*{Information that can be read from the output of Euclid's algorithm}
+\begin{itemize}
+\item The $\gcd(a,b)$ satisfies $$\gcd(a,b)=r_{n+1}$$This is, the greatest common divisor of $a$ and $b$ is the last number used as divisor when the algorithm terminated.
+\item Bezout's equation expressing $\gcd(a,b)$ as a combination $$ax+by=\gcd(a,b)$$ for some integers $x$ and $y$.
+\end{itemize}
+
+\section*{Bezout's equation}
+
+To produce Bezout's equation for $a,b$, from the output of Euclid's extended algorithm we first write the output by solving in each equation for the remainder 
+\begin{align*}
+r_{0}-r_1q_0&=\tikzmark{a}r_2\\
+r_1-\tikzmark{b}r_2q_1&=\tikzmark{c}r_3\\
+r_2-\tikzmark{d}r_3q_2&=r_4\\
+\vdots&\phantom{{}={}}\vdots\\
+r_{n-2}-r_{n-1}q_{n-2}+&=\tikzmark{e}r_{n}\\
+r_{n-1}-\tikzmark{f}r_{n}q_{n-1}+&=r_{n+1}\\
+r_{n}&=r_{n+1}q_{n} + 0
+\begin{tikzpicture}[overlay,remember picture,out=225,out=335,distance=0.6cm]
+    \draw[->,red] (a.south) to (b.north);
+		\draw[->,red] (c.south) to (d.north);
+		\draw[->,red] (e.south) to (f.north);
+  \end{tikzpicture}
+\end{align*}
+
+Substituting all of these equations into the second to last one, we get $\gcd(a,b)$ expressed in terms of $r_0$ and $r_1$, which are $a$ and $b$, as wanted.
+
+\section*{Multiplicative inverse in modular arithmetic}
+In the case that $\gcd(a,b)=1$, Bezout's equation takes the form $$ax+by=1$$
+If we reduce this equation modulo $b$, the term $bx$ becomes $0$, for being a multiple of $b$. We obtain $$ax\equiv 1\pmod{b}$$
+Therefore, $x$, or rather its remainder modulo $b$, is the multiplicative inverse of $a$, modulo $b$.
+
+\section*{Numeric example} Let us compute the $\gcd$ of $2519$ and $377$.
+
+First, we perform Euclid's Extended Algorithm.
+
+\begin{align*}
+2519&=\tikzmark{a}377\cdot6+\tikzmark{c}257\\
+&\\
+\tikzmark{b}377&=\tikzmark{d}257\cdot1+\tikzmark{f}120\\
+&\\
+\tikzmark{e}257&=\tikzmark{g}120\cdot2+\tikzmark{h}17\\
+&\\
+\tikzmark{i}120&=\tikzmark{j}17\cdot7+\tikzmark{k}\boxed{1}\\
+&\\
+\tikzmark{l}17&=\tikzmark{m}\boxed{1}\cdot 17+0
+\begin{tikzpicture}[overlay,remember picture,out=225,out=335,distance=0.6cm]
+    \draw[->,red] (a.south) to (b.north);
+		\draw[->,red] (c.south) to (d.north);
+		\draw[->,red] (d.south) to (e.north);
+		\draw[->,red] (f.south) to (g.north);
+		\draw[->,red] (g.south) to (i.north);
+		\draw[->,red] (h.south) to (j.north);
+		\draw[->,red] (j.south) to (l.north);
+		\draw[->,red] (k.south) to (m.north);
+  \end{tikzpicture}
+\end{align*}
+
+The last divisor used is the $\gcd$. So, $\gcd(2519,377)=1$.
+
+Now, to form Bezout's equation, let's solve for the remainders in all these equations and substitute each into the next one until we get to the second-to-last equation. We don't want to carry out any of the arithmetic operations, while we are doing the substitutions, at least not the ones with the numbers $2519$ and $377$.
+
+\begin{align*}
+2519-\tikzmark{a}377\cdot6&=\tikzmark{c}257\\
+&\\
+\tikzmark{b}377-\tikzmark{d}257\cdot1&=\tikzmark{f}120\\
+&\\
+\tikzmark{e}257-\tikzmark{g}120\cdot2&=\tikzmark{h}17\\
+&\\
+\tikzmark{i}120-\tikzmark{j}17\cdot7&=\tikzmark{k}\boxed{1}
+\begin{tikzpicture}[overlay,remember picture,out=225,out=335,distance=0.6cm]
+    \draw[->,red] (c.south) to (d.north);
+		\draw[->,red] (f.south) to (g.north);
+		\draw[->,red] (h.south) to (j.north);
+  \end{tikzpicture}
+\end{align*}
+
+Substituting the third (second-to-last) equation into the last one to eliminate the remainder $17$, we get 
+
+$$120-(257-120\cdot 2)\cdot 7=\boxed{1}$$
+
+Now we can use the second equation to eliminate from this one all occurrences of the remainder $120$. We get 
+
+$$(377-257\cdot1)-(257-(377-257\cdot1)\cdot 2)\cdot 7=\boxed{1}$$
+
+Now we use the first equation to eliminate from this one all occurences of the remainder $257$. We get
+
+$$(377-(2519-377\cdot 6)\cdot1)-((2519-377\cdot 6)-(377-(2519-377\cdot 6)\cdot1)\cdot 2)\cdot 7=\boxed{1}$$
+
+Finally, we gather together all terms that are multiplied by $2519$ and all that are multiplied by $377$. We get
+
+$$2519\cdot (-22)+377\cdot (147) =\boxed{1}$$
+
+The two factors $-22$ and $147$ in Bezout's equation are not unique. We could, for example add and subtract a multiple of $2519\cdot 377$ and get 
+
+\begin{align*}\boxed{1}&=2519\cdot (-22)+2519\cdot377\cdot k-2519\cdot377\cdot k+377\cdot (147)\\
+&=2519\cdot (377\cdot k-22)+377\cdot (147-2519\cdot k)
+\end{align*}
+
+So, the factors $377\cdot k-22$ and $147-2519\cdot k$ also work.
+
+In the process we also got that $$377\cdot 147\equiv1\pmod{2519}$$
+and that $$2519\cdot (-22)\equiv1\pmod{377}$$
+
+\section*{Implementation}
+
+It is important to practice the computations above a few times, by hand. 
+To verify your computations we can use a computer.
+
+The following is a function in Python that inputs $a$ and $b$ and returns a triple $d,x,y$ such that $$ax+by=d$$
+
+\begin{lstlisting}[language=Python]
+def xgcd(a, b):
+    """return (d, x, y) such that a*x + b*y = d = gcd(a, b)"""
+    x0, x1, y0, y1 = 0, 1, 1, 0
+    while a != 0:
+        (q, a), b = divmod(b, a), a
+        y0, y1 = y1, y0 - q * y1
+        x0, x1 = x1, x0 - q * x1
+    return b, x0, y0
+\end{lstlisting}
+
+\noindent\textbf{Note:} To copy this code into a Python interpreter, remember that in Python the indentation of the lines is important. So, give $4$ spaces to indent each indented line.
+
+Executing \lstinline{xgcd(2519,377)} we get \lstinline{(1,-22,147)}. So, the example should be OK (or both the example and the Python code are wrong).
+
+\section*{Continued fractions}
+
+A byproduct of the output of the Extended Euclid's Algorithm for the input $a,b$, with $a\geq b$, is a \emph{continued fraction} expansion of the rational number $\frac{a}{b}$. With the notation above, we get that 
+
+$$\frac{a}{b}=\frac{r_0}{r_1}=\xcontfrac{q_0;q_1,q_2,\cfracdots,q_n}$$
+
+
+
+
+\end{document}
