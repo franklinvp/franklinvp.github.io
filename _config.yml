@@ -272,6 +272,7 @@ exclude:
   - README.md
   - screenshot.png
   - docs/
+  - franklinio_backup/
 
 plugins:
   - jekyll-paginate
