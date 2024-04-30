@@ -6,7 +6,7 @@ subtitle: A type of problem that can be attempted at any age
 
 A word is a concatenation of $0$ or more letters from a finite alphabet. Consider the alphabet $\{a,b\}$ consisting of the letters $a$ and $b$. Examples of words on this alphabet are $a, b, aab, babaa$ and the _empty word_ $""$, which is often denoted by $\epsilon$. Words can be concatenated. This means putting them one right after the other to form longer words. For example, the concatenation of $aab$ and $bba$ results in the word $aabbba$. The concatenation of the empty word $\epsilon$ and any other word $w$, results on the same word $w$.
 
-**Problem 1:** Assume that we are biven two sets of words. The **"top words"**: 
+**Problem 1:** Assume that we are given two sets of words. The **"top words"**: 
 $$t_1=aa, t_2=bb, t_3=abb$$
 and the **"bottom words"**:
 $$b_1=aab, b_2=ba and b_3=b$$
