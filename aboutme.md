@@ -1,16 +1,29 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+page-col: "#000000"
+text-col: "#FFFFFF"
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is **Franklin** and my last name *Vera Pacheco*.
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- Ready to do mathematics and talk about it
+- Can write some music but can't talk about it
 
-What else do you need?
+### On the train
 
-### My story
+![Franklin Vera Pacheco](assets/img/avatar-icon.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+### My outdoor office
+
+![Franklin Vera Pacheco](assets/img/outdoor_office.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
+
+### Riding a sea horse
+![Franklin Vera Pacheco](assets/img/Horseback.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
+
+### Goofy living room
+![Franklin Vera Pacheco](assets/img/404oops.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
+
+### At the Malecon in Havana
+![Malecon](assets/img/Malecon.jpg){: .mx-auto.d-block style="max-height: 80vh; width: auto;"}
+
