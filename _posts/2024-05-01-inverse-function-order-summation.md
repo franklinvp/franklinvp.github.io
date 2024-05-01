@@ -17,7 +17,7 @@ We could add all these values in any order.
 
 The sum $\sum\_{x\in A}\sum\_{y\in B}f(x,y)$ is adding first each row and then adding those sums.
 
-$$\begin{align*} 0+1+2+0&=3\\ 3+4+5+6&=18\\ 0+7+8+9&=24\\ 0+0+10+0&=10\\ 0+11+0+0&=11\\\hline\\&\phantom{{}={}}66 \end{align*}$$
+$$\begin{align*} 0+1+2+0&=3\\ 3+4+5+6&=18\\ 0+7+8+9&=24\\ 0+0+10+0&=10\\ 0+11+0+0&=11\\\hline\\&\phantom{\{\}=\{\}}66 \end{align*}$$
 
 The sum $\sum\_{y\in B}\sum\_{x\in A}f(x,y)$ is adding first each column and then adding those sums.
 
