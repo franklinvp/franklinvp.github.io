@@ -2,7 +2,7 @@
 
 ----
 
-Two functions on the positive integers $\mathbb{Z}_{>0}$
+Two functions on the positive integers $\mathbb{Z}\_{>0}$
 $$\begin{align*}f(n)&=2n-\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor\qquad g(n)&=2n+\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor \end{align*}$$
 and we need to prove that their ranges are two infinite sets that are disjoint and their union are all of $\mathbb{Z}_{>0}$, in other words their ranges are a partition of the positive integers into two infinite sets.
 
@@ -20,7 +20,9 @@ Before stating the theorem, proving it and using it to solve Euclid 2011 Problem
 
 I am going to state the theorem speaking of the natural numbers $\mathbb{N}={0,1,2,\ldots}$, for my convenience. Adding $1$ where appropriate, we get similar statements for the positive integers $\mathbb{Z}_{>0}$.
 
-**Definition:** A pair of functions $f,g:\mathbb{N}\to\mathbb{N}$ is called a Galois connection on $\mathbb{N}$ when they are monotonic (non-decreasing) and for all $m,n\in\mathbb{N}$ we have $$f(n)\leq m\iff n\leq g(m)\qquad\qquad\qquad\qquad(*)$$
+**Definition:** A pair of functions $f,g:\mathbb{N}\to\mathbb{N}$ is called a Galois connection on $\mathbb{N}$ when they are monotonic (non-decreasing) and for all $m,n\in\mathbb{N}$ we have
+
+$$f(n)\leq m\iff n\leq g(m)\qquad\qquad\qquad\qquad(*)$$
 
 **Note:** Never mind the name “Galois connection”. It comes from (*) being a property that appears in, among many other places, in an area of study called Galois Theory. You don’t even need to remember this name for now. The name might sound fancy, but the property is very simple. two simple-looking inequalities that we can jump from one to another. Now, what we do need to notice, to have a mature understanding of why $(*)$ must be an interesting property to study, is how $(*)$ is allowing us to make the $f$ jump to the other side of an inequality. Of course, it jumps as the function $g$. Where have we seen something like that? Well, if instead of inequalities we had equations, that is what inverse functions do: $f$ and $g$ are inverses when $f(n)=m\iff n=g(m)$. So, property $(*)$ is kind of "being inverses”, but in the world of inequalities.
 
