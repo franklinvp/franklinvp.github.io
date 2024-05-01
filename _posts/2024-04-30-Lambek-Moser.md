@@ -1,7 +1,9 @@
 [Euclid 2011, Problem 9](https://www.cemc.uwaterloo.ca/contests/past_contests.html). In this problem they gave us:
 
 > Two functions on the positive integers $\mathbb{Z}\_{>0}$
->$$\begin{align*}f(n)&=2n-\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor\qquad g(n)&=2n+\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor \end{align*}$$
+>
+>$$\begin{align*}f(n)&=2n-\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor\\g(n)&=2n+\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor \end{align*}$$
+>
 >and we need to prove that their ranges are two infinite sets that are disjoint and their union are all of $\mathbb{Z}_{>0}$, in other words their ranges are a partition of the positive integers into two infinite sets.
 
 This problem can be solved by completely determining the ranges of $f$ and $g$. This is, finding for which $m$ the equation $f(n)=m$ has solutions, and for which $m$ the equation $g(n)=m$ has solutions. Note that a floor $\left\lfloor x\right\rfloor$ is equivalent to a pair of inequalities $\left\lfloor x\right\rfloor \leq x<\left\lfloor x\right\rfloor+1$. So, each of these equations is just a system of two inequalities in disguise. The proposed solution attacked the problem this way.
@@ -10,7 +12,7 @@ This type of problem (pairs of infinite sets partitioning the positive integers,
 
 Before stating the theorem, proving it and using it to solve Euclid 2011 Problem 9, let’s mention another similar classical problem that you might have seen.
 
-> **Exercise 1:** (**Beatty sequence** or **Rayleigh’s theorem**) Assume that $r,s$ are two irrational numbers such that $\frac{1}{r}+\frac{1}{s}=1$. Show that the sets $\left\{\left\lfloor rn\right\rfloor:\ n\in\mathbb{Z}\_{>0}\right\}$ and $\left\{\left\lfloor sn\right\rfloor:\ n\in\mathbb{Z}\_{>0}\right\}$ are two infinite sets that partition $\mathbb{Z}\_{>0}$. Actually, the converse is also true. If these two sets are infinite and form a partition of $\mathbb{Z}\_{>0}$, then $r,s$ are irrational and $\frac{1}{r}+\frac{1}{s}=1$.
+> **Exercise 1:** (**Beatty sequence** or **Rayleigh’s theorem**) Assume that $r,s$ are two irrational numbers such that $\frac{1}{r}+\frac{1}{s}=1$. Show that the sets $\left\lbrace\left\lfloor rn\right\rfloor:\ n\in\mathbb{Z}\_{>0}\right\rbrace$ and $\left\lbrace\left\lfloor sn\right\rfloor:\ n\in\mathbb{Z}\_{>0}\right\rbrace$ are two infinite sets that partition $\mathbb{Z}\_{>0}$. Actually, the converse is also true. If these two sets are infinite and form a partition of $\mathbb{Z}\_{>0}$, then $r,s$ are irrational and $\frac{1}{r}+\frac{1}{s}=1$.
 
 > **Exercise 2:** The function $F(n)=n^2$, for $n=0,1,2,3,...$ enumerates the perfect squares. Find a formula to enumerate the non-perfect squares using only algebraic operations and the floor function.
 
@@ -20,7 +22,7 @@ I am going to state the theorem speaking of the natural numbers $\mathbb{N}={0,1
 
 $$f(n)\leq m\iff n\leq g(m)\qquad\qquad\qquad\qquad(*)$$
 
-**Note:** Never mind the name *Galois connection*. It comes from $(*)$ being a property that appears in, among many other places, in an area of study called Galois Theory. You don’t even need to remember this name for now. The name might sound fancy, but the property is very simple. two simple-looking inequalities that we can jump from one to another. Now, what we do need to notice, to have a mature understanding of why $(*)$ must be an interesting property to study, is how $(*)$ is allowing us to make the $f$ jump to the other side of an inequality. Of course, it jumps as the function $g$. Where have we seen something like that? Well, if instead of inequalities we had equations, that is what inverse functions do: $f$ and $g$ are inverses when $f(n)=m\iff n=g(m)$. So, property $(*)$ is kind of "being inverses”, but in the world of inequalities.
+**Note:** Never mind the name *Galois connection*. It comes from (*) being a property that appears in, among many other places, in an area of study called Galois Theory. You don’t even need to remember this name for now. The name might sound fancy, but the property is very simple. two simple-looking inequalities that we can jump from one to another. Now, what we do need to notice, to have a mature understanding of why (*) must be an interesting property to study, is how (*) is allowing us to make the $f$ jump to the other side of an inequality. Of course, it jumps as the function $g$. Where have we seen something like that? Well, if instead of inequalities we had equations, that is what inverse functions do: $f$ and $g$ are inverses when $f(n)=m\iff n=g(m)$. So, property (*) is kind of "being inverses”, but in the world of inequalities.
 
 > **Lambek-Moser Theorem:** $f,g:\mathbb{N}\to\mathbb{N}$ are a Galois connection on $\mathbb{N}$, if and only if the sets $$A=\{f(n)+n:\ n\in\mathbb{N}\}\qquad\text{ and }\qquad B=\{g(m)+m+1:\ m\in\mathbb{N}\}$$ are infinite and partition $\mathbb{N}$. This is, are disjoint and their union is $\mathbb{N}$.
 
