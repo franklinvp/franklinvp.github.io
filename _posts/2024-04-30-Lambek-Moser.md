@@ -1,12 +1,8 @@
 [Euclid 2011, Problem 9](https://www.cemc.uwaterloo.ca/contests/past_contests.html). In this problem they gave us:
 
-----
-
-Two functions on the positive integers $\mathbb{Z}\_{>0}$
-$$\begin{align*}f(n)&=2n-\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor\qquad g(n)&=2n+\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor \end{align*}$$
-and we need to prove that their ranges are two infinite sets that are disjoint and their union are all of $\mathbb{Z}_{>0}$, in other words their ranges are a partition of the positive integers into two infinite sets.
-
-----
+> Two functions on the positive integers $\mathbb{Z}\_{>0}$
+>$$\begin{align*}f(n)&=2n-\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor\qquad g(n)&=2n+\left\lfloor\frac{1+\sqrt{8n-7}}{2}\right\rfloor \end{align*}$$
+>and we need to prove that their ranges are two infinite sets that are disjoint and their union are all of $\mathbb{Z}_{>0}$, in other words their ranges are a partition of the positive integers into two infinite sets.
 
 This problem can be solved by completely determining the ranges of $f$ and $g$. This is, finding for which $m$ the equation $f(n)=m$ has solutions, and for which $m$ the equation $g(n)=m$ has solutions. Note that a floor $\left\lfloor x\right\rfloor$ is equivalent to a pair of inequalities $\left\lfloor x\right\rfloor \leq x<\left\lfloor x\right\rfloor+1$. So, each of these equations is just a system of two inequalities in disguise. The proposed solution attacked the problem this way.
 
@@ -14,19 +10,19 @@ This type of problem (pairs of infinite sets partitioning the positive integers,
 
 Before stating the theorem, proving it and using it to solve Euclid 2011 Problem 9, let’s mention another similar classical problem that you might have seen.
 
-**Exercise 1:** (**Beatty sequence** or **Rayleigh’s theorem**) Assume that $r,s$ are two irrational numbers such that $\frac{1}{r}+\frac{1}{s}=1$. Show that the sets $\left\{\left\lfloor rn\right\rfloor:\ n\in\mathbb{Z}_{>0}\right\}$ and $\left\{\left\lfloor sn\right\rfloor:\ n\in\mathbb{Z}_{>0}\right\}$ are two infinite sets that partition $\mathbb{Z}_{>0}$. Actually, the converse is also true. If these two sets are infinite and form a partition of $\mathbb{Z}_{>0}$, then $r,s$ are irrational and $\frac{1}{r}+\frac{1}{s}=1$.
+> **Exercise 1:** (**Beatty sequence** or **Rayleigh’s theorem**) Assume that $r,s$ are two irrational numbers such that $\frac{1}{r}+\frac{1}{s}=1$. Show that the sets $\left\{\left\lfloor rn\right\rfloor:\ n\in\mathbb{Z}\_{>0}\right\}$ and $\left\{\left\lfloor sn\right\rfloor:\ n\in\mathbb{Z}\_{>0}\right\}$ are two infinite sets that partition $\mathbb{Z}\_{>0}$. Actually, the converse is also true. If these two sets are infinite and form a partition of $\mathbb{Z}\_{>0}$, then $r,s$ are irrational and $\frac{1}{r}+\frac{1}{s}=1$.
 
-**Exercise 2:** The function $F(n)=n^2$, for $n=0,1,2,3,...$ enumerates the perfect squares. Find a formula to enumerate the non-perfect squares using only algebraic operations and the floor function.
+> **Exercise 2:** The function $F(n)=n^2$, for $n=0,1,2,3,...$ enumerates the perfect squares. Find a formula to enumerate the non-perfect squares using only algebraic operations and the floor function.
 
-I am going to state the theorem speaking of the natural numbers $\mathbb{N}={0,1,2,\ldots}$, for my convenience. Adding $1$ where appropriate, we get similar statements for the positive integers $\mathbb{Z}_{>0}$.
+I am going to state the theorem speaking of the natural numbers $\mathbb{N}={0,1,2,\ldots}$, for my convenience. Adding $1$ where appropriate, we get similar statements for the positive integers $\mathbb{Z}\_{>0}$.
 
-**Definition:** A pair of functions $f,g:\mathbb{N}\to\mathbb{N}$ is called a Galois connection on $\mathbb{N}$ when they are monotonic (non-decreasing) and for all $m,n\in\mathbb{N}$ we have
+> **Definition:** A pair of functions $f,g:\mathbb{N}\to\mathbb{N}$ is called a Galois connection on $\mathbb{N}$ when they are monotonic (non-decreasing) and for all $m,n\in\mathbb{N}$ we have
 
 $$f(n)\leq m\iff n\leq g(m)\qquad\qquad\qquad\qquad(*)$$
 
-**Note:** Never mind the name “Galois connection”. It comes from (*) being a property that appears in, among many other places, in an area of study called Galois Theory. You don’t even need to remember this name for now. The name might sound fancy, but the property is very simple. two simple-looking inequalities that we can jump from one to another. Now, what we do need to notice, to have a mature understanding of why $(*)$ must be an interesting property to study, is how $(*)$ is allowing us to make the $f$ jump to the other side of an inequality. Of course, it jumps as the function $g$. Where have we seen something like that? Well, if instead of inequalities we had equations, that is what inverse functions do: $f$ and $g$ are inverses when $f(n)=m\iff n=g(m)$. So, property $(*)$ is kind of "being inverses”, but in the world of inequalities.
+**Note:** Never mind the name *Galois connection*. It comes from $(*)$ being a property that appears in, among many other places, in an area of study called Galois Theory. You don’t even need to remember this name for now. The name might sound fancy, but the property is very simple. two simple-looking inequalities that we can jump from one to another. Now, what we do need to notice, to have a mature understanding of why $(*)$ must be an interesting property to study, is how $(*)$ is allowing us to make the $f$ jump to the other side of an inequality. Of course, it jumps as the function $g$. Where have we seen something like that? Well, if instead of inequalities we had equations, that is what inverse functions do: $f$ and $g$ are inverses when $f(n)=m\iff n=g(m)$. So, property $(*)$ is kind of "being inverses”, but in the world of inequalities.
 
-**Lambek-Moser Theorem:** $f,g:\mathbb{N}\to\mathbb{N}$ are a Galois connection on $\mathbb{N}$, if and only if the sets $$A=\{f(n)+n:\ n\in\mathbb{N}\}\qquad\text{ and }\qquad B=\{g(m)+m+1:\ m\in\mathbb{N}\}$$ are infinite and partition $\mathbb{N}$. This is, are disjoint and their union is $\mathbb{N}$.
+> **Lambek-Moser Theorem:** $f,g:\mathbb{N}\to\mathbb{N}$ are a Galois connection on $\mathbb{N}$, if and only if the sets $$A=\{f(n)+n:\ n\in\mathbb{N}\}\qquad\text{ and }\qquad B=\{g(m)+m+1:\ m\in\mathbb{N}\}$$ are infinite and partition $\mathbb{N}$. This is, are disjoint and their union is $\mathbb{N}$.
 
 **Proof:** Let’s start with the “only if” direction, which is the most interesting for us, to solve Problem 9 of Euclid 2011. So, we assume that $f,g$ are a Galois connection and prove that $A,B$ partition $\mathbb{N}$.
 
@@ -52,9 +48,7 @@ This is only a play with inequalities. If $a(n)\leq m$, then $n-m+1\leq \left\lf
 
 The other direction is almost the same work. If $n\leq b(m)$, then $n-m\leq\left\lfloor\frac{1+\sqrt{8m+1}}{2}\right\rfloor\leq \frac{1+\sqrt{8m+1}}{2}$. Massaging this gives $(2n-2m-1)^2-8m-1\leq 0$. We solve for $m$, and we only need to look at the resulting inequality with the smaller root this time. $n+1-\frac{1+\sqrt{8n+1}}{2}\leq m$. Since $m$ is an integer, we have that $n+1-\left\lfloor\frac{1+\sqrt{8n+1}}{2}\right\rfloor\leq m$, which is $a(m)\leq n$.
 
-**Exercise 3:** You will get a good command on the technique in the proof of Lambek-Moser theorem, if you now solve Problem 9 without invoking Lambek-Moser theorem, you instead imitate the proof, with these two functions $a,b$. In other words, imitate the two paragraphs that begging with “Proving that $A,B$ are disjoint” and "Proving that the union of $A$ and $B$ is all of $\mathbb{N}$.
-
-And for sure, do Exercise 1 too. Every Math competition student and mathematician should have seen that Exercise 1 at some point.
+> **Exercise 3:** You will get a good command on the technique in the proof of Lambek-Moser theorem, if you now solve Problem 9 without invoking Lambek-Moser theorem, you instead imitate the proof, with these two functions $a,b$. In other words, imitate the two paragraphs that begging with “Proving that $A,B$ are disjoint” and "Proving that the union of $A$ and $B$ is all of $\mathbb{N}$.
 
 **Note:** There is another observation that we should make about $(*)$, that is what allow us to do computations (produce formulas) of Galois connections. This is useful in problems like Exercise 2. In this problem, we have a formula $F(n)=n^2$ for the perfect squares, and we need to produce a formula for the complementary set. Note that the $f$ that we would care about is $f(n)=n^2-n$. We only need to “compute” its “kind of inverse” $g$ that forms $f,g$ a Galois connection.
 
@@ -68,4 +62,4 @@ Note also that the floor function is also defined by maximum (the maximum intege
 
 Pretty stuff, eh? You can imagine that the organizers of math competitions have here a plethora of possible pretty exercises to ask, that would also be a bit annoying to solve if we didn’t know how the Lamberk-Moser theorem goes. They can put any simple formula for $f(m)$, and ask something about the complement. $f(m)$ could be the the squares $m^2$, cubes $m^3$, triangular numbers $\frac{m(m+1)}{2}$, ... anything increasing really. Or they could give use a mysterious pair of function with floors, like in Problem 9. Or two complementary infinite subsets of the natural numbers and no formulas at all, like the primes and composite numbers and we need to say something about the function $p_n$ that gives the $n$-th prime.
 
-**Exercise 4:** This should be simple, but good to practice our understanding. If $A$ and $B$ are the even and odd natural numbers, respectively. Who are the corresponding functions $f,g$ that form a Galois connection?
+> **Exercise 4:** This should be simple, but good to practice our understanding. If $A$ and $B$ are the even and odd natural numbers, respectively. Who are the corresponding functions $f,g$ that form a Galois connection?
