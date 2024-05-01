@@ -44,9 +44,7 @@ $\|F_n\|=1+\phi(1)+\phi(2)+\phi(3)+...+\phi(n)$
 
 As some of you noticed when adding the elements of $F_{10}$, the fractions in $F_n$ appear in pairs that add up to $1$. In fact, if $\frac{a}{b}\in F_n$, then $\gcd(a,b)=1$. Therefore, the fraction $\frac{b-a}{b}$ also satisfies $\gcd(b-a,b)=1$. This means that $\frac{b-a}{b}\in F_n$. Adding these two fractions we get $\frac{a}{b}+\frac{b-a}{b}=1$.
 
-This observation tells us that if we take the sum of all elements of $F_n$ twice, we add a $1$ for each element of $F_n$. That is, the total is the same as the number of elements $\|F_n\|$. So,
-
-$2\sum_{r\in F_n}r=\|F_n\|$
+This observation tells us that if we take the sum of all elements of $F_n$ twice, we add a $1$ for each element of $F_n$. That is, the total is the same as the number of elements $\|F_n\|$. So, $2\sum_{r\in F_n}r=\|F_n\|$.
 
 ## Application
 
