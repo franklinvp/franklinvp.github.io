@@ -22,7 +22,7 @@ Do practice at least once constructing a few of the Farey sequences. You could g
 
 ## Consecutive terms in a Farey sequence
 
-If $\frac{a}{b}<\frac{c}{d}$ are two consecutive terms in a Farey sequence, then $\det\begin{pmatrix}c&a\\d&b\end{pmatrix}=cb-ad=1$.
+If $\frac{a}{b}<\frac{c}{d}$ are two consecutive terms in a Farey sequence, then $\det\begin{pmatrix}c&a\\ d&b\end{pmatrix}=cb-ad=1$.
 
 Verify some examples. For example, $F_4=(\frac{0}{1},\frac{1}{4},\frac{1}{3},\frac{1}{2},\frac{2}{3},\frac{3}{4},\frac{1}{1})$. If we take, say, $\frac{1}{2}<\frac{2}{3}$, that are two consecutive terms, then $2\cdot 2-1\cdot 3=1$.
 
