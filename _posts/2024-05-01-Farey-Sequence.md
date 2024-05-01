@@ -44,13 +44,13 @@ $\|F_n\|=1+\phi(1)+\phi(2)+\phi(3)+...+\phi(n)$
 
 As some of you noticed when adding the elements of $F_{10}$, the fractions in $F_n$ appear in pairs that add up to $1$. In fact, if $\frac{a}{b}\in F_n$, then $\gcd(a,b)=1$. Therefore, the fraction $\frac{b-a}{b}$ also satisfies $\gcd(b-a,b)=1$. This means that $\frac{b-a}{b}\in F_n$. Adding these two fractions we get $\frac{a}{b}+\frac{b-a}{b}=1$.
 
-This observation tells us that if we take the sum of all elements of $F_n$ twice, we add a $1$ for each element of $F_n$. That is, the total is the same as the number of elements $|F_n|$. So,
+This observation tells us that if we take the sum of all elements of $F_n$ twice, we add a $1$ for each element of $F_n$. That is, the total is the same as the number of elements $\|F_n\|$. So,
 
 $2\sum_{r\in F_n}r=\|F_n\|$
 
 ## Application
 
-We needed to add all reduced fractions between $23$ and $24$ with denominators not larger than $10$. If we take out $23$ from each of those fractions, we would need to add all elements of $F_{10}$ and $23$ times $|F_{10}|$. According to the properties above, that would be $\frac{1}{2}\|F_{10}\|+23\|F_{10}\|$, where $\|F_{10}\|=1+\phi(1)+\phi(2)+...+\phi(10)$.
+We needed to add all reduced fractions between $23$ and $24$ with denominators not larger than $10$. If we take out $23$ from each of those fractions, we would need to add all elements of $F_{10}$ and $23$ times $\|F_{10}\|$. According to the properties above, that would be $\frac{1}{2}\|F_{10}\|+23\|F_{10}\|$, where $\|F_{10}\|=1+\phi(1)+\phi(2)+...+\phi(10)$.
 
 Well, strictly speaking, in the problem the fractions were supposed to be strictly greater than $23$. So, I guess we must subtract this $23$, or only add $23(\|F_{10}\|-1)$.
 
