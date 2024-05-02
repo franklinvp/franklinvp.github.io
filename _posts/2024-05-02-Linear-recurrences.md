@@ -48,7 +48,7 @@ When you get more comfortable with linear algebra it will be a good exercise to 
 1. [Fibonacci] Find an algebraic expression for $F\_n$ in terms of $n$, if $F\_{n+2}=F\_{n+1}+F\_{n}$ for all $n\in\mathbb{Z}$. **Note:** The solution will depend on two arbitrary constants. Then impose that $F\_0=1$ and $F\_1=1$ to get what is known as [Binet's formula](https://en.wikipedia.org/wiki/Fibonacci\_sequence#Closed-form\_expression) for the Fibonacci sequence.
 2. Find all solutions of $S\_n=2S\_{n-1}-S\_n$.
 3. Find all solutions of $D\_{n}=4D\_{n-1}-D\_{n-2}$.
-4. If $X\_{n}=5X\_{n-1}-6X\_{n-2}$, show that $|X\_n/3^n|$ is bounded. In other words, that there is some constant $M$ such that for all $n$ we have $|X\_n/3^n|\leq M$. **Hint:** First compute the solution of the recurrence and then divide it by $3^n$.
+4. If $X\_{n}=5X\_{n-1}-6X\_{n-2}$, show that $\|X\_n/3^n\|$ is bounded. In other words, that there is some constant $M$ such that for all $n$ we have $\|X\_n/3^n\|\leq M$. **Hint:** First compute the solution of the recurrence and then divide it by $3^n$.
 
 ## A little taste of why the general solution looks like that
 
